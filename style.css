@@ -8,8 +8,11 @@
 
 body {
   font-family: 'Merriweather', serif; /* Fonte elegante */
-  background-color: #fff;
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-color: #070719;
+  background-image: url('ultimo.png');
   background-size: cover;
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
   background-position: center;
   overflow-x: hidden; /* Impede a rolagem lateral */
 
