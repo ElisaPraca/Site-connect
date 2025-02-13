@@ -3,6 +3,7 @@ section.slider{
     width: 100%;
     height: auto;
     padding: 0 !important;
+    overflow: hidden;
 }
 
 .slider-content{
