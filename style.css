@@ -1,0 +1,927 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+  font-family: 'Merriweather', serif; /* Fonte elegante */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-color: #070719;
+  background-image: url('ultimo.png');
+  background-size: cover;
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+  background-position: center;
+  overflow-x: hidden; /* Impede a rolagem lateral */
+}
+
+li{
+  list-style: none;
+}
+
+a{
+text-decoration: none;
+color: #fff;
+font-size: 1rem;
+}
+
+a:hover {
+  color: #00008B;
+}
+
+/*Cabeçario*/
+
+header{
+  width: 100%;
+  padding: 60px 4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+
+header.rolagem{
+  background: linear-gradient(to right, #030303, #030303);
+  padding: 20px 4%;
+}
+
+header.rolagem a, header.rolagem i{
+  color: #fff;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-img-logo {
+  width: 150px;  /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.navbar .links {
+display: flex;
+gap: 2rem;
+}
+
+.navbar .toggle_btn{
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn{
+  background-color: #002266;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2 ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active{
+  scale: 0.95;
+}
+
+/* DROPDOWN MENU*/
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: heigth 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 992px){
+.navbar .links,
+.navbar .action_btn{
+  display: none;
+}
+
+.navbar .toggle_btn{
+  display: block;
+}
+
+.dropdown_menu {
+  display: block;
+}
+
+}
+
+@media (max-width: 576px) {
+.dropdown_menu{
+  left: 2rem;
+  width: unset;
+}
+}
+
+main.cards {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  
+  padding: 5px;
+  height: 150px; /* Ocupa toda a altura da tela */
+  width: 100%; /* Ocupa toda a largura da tela */
+
+  position: relative; /* Necessário para usar o 'top' */
+  top: -50px; /* Ajuste o valor para mover os cards para cima */
+}
+
+main.cards section.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 1rem 1.5rem;
+  border-radius: 9px;
+  max-height: 120px;
+  margin-left: 5px;
+}
+
+main.cards section.card:first-child {
+  margin-left: 0;
+}
+
+/* Estilo do ícone, imagem e título */
+main.cards section.card .icon {
+  width: 30px;
+  height: 30px;
+}
+
+main.cards section.card img {
+  width: 100%;
+}
+
+main.cards section.card h3 {
+  font-size: 100%;
+  margin: 5px 0;
+}
+
+main.cards section.card span {
+  font-weight: 300;
+  max-width: 240px;
+  font-size: 68%;
+  margin-bottom: 16px;
+}
+
+main.cards section.card.contact {
+  box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+main.cards section.card.shop {
+  box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+main.cards section.card.about {
+  box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+
+/* Ajuste para telas médias */
+@media screen and (max-width: 720px) {
+  main.cards {
+      flex-wrap: wrap; /* Permite que os cards se ajustem */
+      justify-content: center;
+      gap: 10px; /* Mantém espaço entre os cards */
+  }
+
+  main.cards section.card {
+      width: 45%; /* Reduz o tamanho para caberem lado a lado */
+      margin-left: 0;
+      margin-bottom: 32px;
+  }
+
+  main.cards section.card:last-child {
+      margin-bottom: 0;
+  }
+}
+
+/* Esconder os cards no mobile */
+@media screen and (max-width: 716px) {
+  main.cards {
+    display: none; /* Oculta toda a seção dos cards no mobile */
+  }
+}
+
+/* Estilo para o texto abaixo do slide */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+
+
+
+.conteudo {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  max-width: 800px; /* Define largura máxima */
+  margin: 10px auto 0; /* Centraliza na horizontal */
+  padding: 20px;
+  color: #fff;
+}
+
+/* Estilização do título */
+.titulo {
+  font-size: 7.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Texto com espaçamento ideal */
+.descricao {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+/*planos*/
+
+.planos {
+  margin-top: 80px; /* Ajuste esse valor conforme o tamanho do cabeçalho */
+}
+
+.wrapper{
+  width: 300px;
+  max-width: 300px; /* Limita o tamanho máximo de cada carrossel */
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.wrapper .header1{
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+  z-index: 5;
+}
+.header1 label{
+  height: 100%;
+  z-index: 2;
+  width: 30%;
+  display: flex;
+  cursor: pointer;
+  font-size: 15px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+.wrapper input[type="radio"] {
+  display: none;
+}
+
+/* Movimenta os slides apenas dentro do carrossel correspondente */
+[id^="tab-1"]:checked ~ .card-area .cards .row-1 {
+  margin-left: 0%;
+}
+
+[id^="tab-2"]:checked ~ .card-area .cards .row-1 {
+  margin-left: -33.4%;
+}
+
+[id^="tab-3"]:checked ~ .card-area .cards .row-1 {
+  margin-left: -66.8%;
+}
+
+/* Faz a animação da aba ativa corretamente */
+[id^="tab-1"]:checked ~ .header1 .slider2 {
+  left: 0%;
+  width: 90px;
+  transform: translateX(5%);
+}
+
+[id^="tab-2"]:checked ~ .header1 .slider2 {
+  left: 50%;
+  width: 120px;
+  transform: translateX(-50%);
+}
+
+[id^="tab-3"]:checked ~ .header1 .slider2 {
+  left: 100%;
+  width: 95px;
+  transform: translateX(-105%);
+}
+
+.header1 label:nth-child(2){
+  width: 40%;
+}
+.header1 .slider2{
+  position: absolute;
+  height: 50%;
+  border-radius: inherit;
+  background: linear-gradient(145deg, #6495ED 0%, #BBDEFF 100%);
+  transition: all 0.3s ease;
+}
+#tab-1:checked ~ .header1 .slider2{
+  left: 0%;
+  width: 90px;
+  transform: translateX(5%);
+}
+#tab-2:checked ~ .header1 .slider2{
+  left: 50%;
+  width: 120px;
+  transform: translateX(-50%);
+}
+#tab-3:checked ~ .header1 .slider2{
+  left: 100%;
+  width: 95px;
+  transform: translateX(-105%);
+}
+.wrapper input[type="radio"]{
+  display: none;
+}
+.card-area{
+  overflow: hidden;
+}
+.card-area .cards{
+  display: flex;
+  width: 300%;
+}
+.cards .row{
+  width: 33.4%;
+}
+.cards .row-1{
+  transition: all 0.3s ease;
+}
+#tab-1:checked ~ .card-area .cards .row-1{
+  margin-left: 0%;
+}
+#tab-2:checked ~ .card-area .cards .row-1{
+  margin-left: -33.4%;
+}
+#tab-3:checked ~ .card-area .cards .row-1{
+  margin-left: -66.8%;
+}
+.row .price-details{
+  margin: 20px 0;
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.price-details .price{
+  font-size: 65px;
+  font-weight: 600;
+  position: relative;
+  font-family: 'Noto Sans', sans-serif;
+}
+.price-details .price::before,
+.price-details .price::after{
+  position: absolute;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.price-details .price::before{
+  content: "R$";
+  left: -18px;
+  top: 17px;
+  font-size: 18px;
+}
+.price-details .price::after{
+  content: "/mês";
+  right: -33px;
+  bottom: 17px;
+  font-size: 13px;
+}
+.price-details p{
+  font-size: 30px;
+  margin-top: 5px;
+
+}
+.row .features li{
+  display: flex;
+  font-size: 15px;
+  list-style: none;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.features li i{
+  background: linear-gradient(#fff 0%, #fff 100%);
+  background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.features li span{
+  margin-left: 5px;
+  color: #fff;
+  
+}
+.wrapper button{
+  width: 100%;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  height: 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  background: linear-gradient(145deg, #00008B 0%, #BBDEFF 100%);
+  transition: transform 0.3s ease;
+}
+.wrapper button:hover{
+  transform: scale(0.98);
+}
+
+.carousels-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os carrosséis quebrem linha */
+  justify-content: center; /* Centraliza os carrosséis */
+  gap: 20px; /* Espaçamento entre os carrosséis */
+  padding: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 350px; /* Reduz o tamanho dos carrosséis em tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousels-container {
+    flex-direction: column; /* Empilha os carrosséis em telas menores */
+    align-items: center; /* Centraliza os carrosséis */
+  }
+  
+  .wrapper {
+    max-width: 100%; /* Ocupa a largura total em telas pequenas */
+  }
+}
+
+
+
+/* ============================ */
+/* IMAGENS .apps            */
+/* ============================ */
+.imagens-apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.imagens-apps img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagens-apps img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+  border: none;
+  height: 0.2px;
+  background-color: #ccc; /* Cor da linha */
+  margin: 20px 0; /* Espaçamento acima e abaixo */
+}
+
+
+
+/* ============================ */
+/* titulo sky          */
+/* ============================ */
+
+/* ----------- ESTILO GERAL ----------- */
+.conteudo1 {
+  text-align: center; /* Centraliza todo o conteúdo */
+  padding: 20px 0; /* Ajusta o espaçamento interno */
+  margin: 5px; /* Remove margens externas */
+}
+
+.conteudo1 h2 {
+  font-size: 2.5em; /* Título grande e chamativo */
+  font-family: 'Poppins', sans-serif; /* Fonte moderna */
+  font-weight: 600; /* Deixa o título mais destacado */
+  color: #FFF; 
+  margin-bottom: 10px; /* Pequeno espaço abaixo do título */
+}
+
+.conteudo1 p {
+  font-size: 1.0em; /* Tamanho legível */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100; /* Texto mais fino e elegante */
+  color: #fff; /* Mantém a cor branca */
+  margin: 0; /* Remove margens extras */
+  padding: 0 10px; /* Pequeno padding lateral para melhor leitura */
+  line-height: 1.5; /* Espaçamento adequado entre linhas */
+}
+
+/* ----------- MOBILE RESPONSIVO ----------- */
+@media (max-width: 768px) {
+  .conteudo1 {
+    padding: 10px 0; /* Reduz o espaçamento no mobile */
+  }
+
+  .conteudo1 h2 {
+    font-size: 2em; /* Título um pouco menor para telas pequenas */
+    margin-bottom: 8px;
+  }
+
+  .conteudo1 p {
+    font-size: 1em; /* Ajusta o tamanho do texto */
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+
+  /* Ajustando a seção de baixo para remover espaços extras */
+  .proxima-secao { /* Troque pelo nome da classe da seção seguinte */
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+
+
+
+
+
+/*sky */
+
+.skytv .container2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin: 10px 0;
+}
+
+.skytv .sky-img{
+  flex: 0 0 300px;
+  width: 50%;
+  justify-content: center;
+}
+
+.skytv .sky-img img{
+  width: 300px; /* Define a largura da imagem */
+  height: 300px; /* Define a altura da imagem */
+  border-radius: 50%; /* Torna a imagem redonda */
+  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+
+
+/*sky mobile */
+
+@media (max-width: 768px) {
+  .skytv .container2 {
+    flex-direction: column; /* Empilha os elementos na vertical */
+    text-align: center; /* Centraliza o texto */
+    align-items: center; /* Centraliza tudo na tela */
+    gap: 10px; /* Reduz o espaçamento entre os itens */
+  }
+
+  .skytv .sky-img {
+    display: flex; /* Ativa flexbox */
+    justify-content: center; /* Centraliza a imagem */
+    align-items: center;
+    width: 100%; /* Faz a div ocupar toda a largura */
+    margin-bottom: -20px; /* Aproxima a imagem do texto */
+  }
+
+  .skytv .sky-img img {
+    width: 180px; /* Ajusta o tamanho da imagem */
+    height: 180px;
+  }
+
+  .skytv .features {
+    width: 90%; /* Mantém a lista ajustada à tela */
+    max-width: 400px; /* Define um limite para não ficar muito larga */
+  }
+}
+
+
+
+.carousel1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  overflow: hidden;
+  padding: 15px 0;
+  margin-bottom: 50px;
+}
+
+.carousel-container1 {
+  width: 800px; /* Ajustado para sempre mostrar 5 imagens */
+  overflow: hidden;
+}
+
+.carousel-track1 {
+  display: flex;
+  gap: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track1 img {
+  width: 70px; /* Tamanho menor */
+  height: 70px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.carousel-btn1 {
+  background-color: #0000;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  color: white;
+}
+
+  
+
+
+
+
+
+
+
+.faixa {
+  background-color: #171717;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+
+}
+
+.item {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.icon2 {
+  font-size: 1000px;
+  display: block;
+  margin-bottom: 30px;
+}
+
+button {
+  margin-top: 30px;
+  background-color: white;
+  color: #0044cc;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #002266;
+  color: white;
+}
+
+
+
+
+
+/* ------------ End Campo Acesso Rapido ------------ */
+
+/* --------- App M&S --------- */ 
+.appMes {
+  background-color: black;
+   /* Cor de fundo */
+   border-bottom: 2px solid #00008B; /* Borda branca fina embaixo */
+}
+
+.appMes .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center; /* Centraliza o conteúdo */
+}
+
+.appMes .row {
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo dentro do row */
+  align-items: center;
+  gap: 30px;
+}
+
+.appMes .col-lg-8 {
+  color: #fff;
+  flex: 1;
+}
+
+.appMes .col-lg-8 h2 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-transform: uppercase; /* Deixa o texto em maiúsculas */
+  letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+}
+
+.appMes .col-lg-8 h5 {
+  font-size: 0.8em;
+  margin-bottom: 25px;
+  line-height: 1.8; /* Aumenta o espaçamento entre as linhas do texto */
+}
+
+.appMes .col-lg-8 .btn {
+  font-size: 1.2em;
+  padding: 12px 40px;
+  background-color: #0000;
+  color: white;
+  border: 2px solid #0044cc; /* Borda que combina com a cor do botão */
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.appMes .col-lg-8 .btn:hover {
+  background-color: #0033a0;
+  border-color: #0033a0; /* Muda a cor da borda ao passar o mouse */
+}
+
+.appMes .col-lg-4 {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* Faz a imagem ficar grudada na parte inferior */
+  height: 100%; /* Garante que o flexbox ocupe toda a altura */
+}
+
+.appMes .col-lg-4 img {
+  max-width: 75%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 20px; /* Garante que a imagem fique um pouco abaixo do botão */
+  margin-bottom: 0;
+}
+
+@media (max-width: 716px) {
+  .appMes .col-lg-8 h2 {
+    font-size: 2em; /* Reduz o tamanho da fonte do título */
+  }
+
+  .appMes .col-lg-8 h5 {
+    font-size: 0.7em; /* Reduz o tamanho do subtítulo */
+  }
+
+  .appMes .col-lg-4 {
+    display: none; /* Esconde a imagem */
+  }
+}
+
+
+
+
+
+.article-card {
+  display: grid;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  grid-template-columns: 285px minmax(300px, 445px);
+  max-width: 1100px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 5px hsla(0, 0%, 0%, 0.02),
+              25px 25px 20px hsla(0, 0%, 0%, 0.03),
+              100px 100px 80px hsla(0, 0%, 0%, 0.05);
+  margin-top: 40px;  /* Aumenta o espaço acima */
+  margin-bottom: 40px; /* Aumenta o espaço abaixo */
+  grid-template-columns: 1fr 1.2fr; 
+  
+}
+
+
+.img-box {
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+  width: 100%;  /* Garante que ocupe todo o espaço disponível */
+  height: 100%; /* Ajusta proporcionalmente */
+}
+
+.article-banner {
+  width:  100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  transition: all 0.5s ease;
+}
+
+.article-card:hover .article-banner { transform: scale(1.1); }
+
+.article-content {
+  color: #fff;
+  padding: 32px 40px;
+  border-radius: 0 10px 10px 0;
+  background: #0000;  /* Faixa preta no conteúdo */
+}
+
+.article-title {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.article-text {
+  color: #fff;
+  font-size: var(--fs-13);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.acticle-content-footer {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+}
+
+/*-----------------------------------*\
+#RESPONSIVE
+\*-----------------------------------*/
+
+@media screen and (max-width: 768px) {
+
+  :root {
+
+
+    --fs-13: 12px;
+
+  }
+
+  .article-card {
+    grid-template-columns: 1fr;
+    max-width: 294px;
+    overflow: hidden;
+  }
+
+  .img-box, .article-content { border-radius: 0; }
+
+  .img-box { height: 180px; }
+
+  .article-content { padding: 30px 28px 20px; }
+
+  .article-title { font-size: 15px; }
+
+  .article-text { margin-bottom: 30px; }
+
+  .skytv .container2{
+    flex-direction: column;
+  }
+}
+
+

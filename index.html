@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
+          integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="sli.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="slide.css"/>
+    <link rel="stylesheet" href="foot.css"/>
+    <title>Connect Link - Site</title>
+  </head>
+  
+  <body>
+    <header id="header">
+      <div class="navbar">
+        <div class="logo"><a href="index.html"><img src="Img_apps/logo2.png" alt="Logo" class="logo-img-logo"></a></div>
+        <ul class="links">
+          <li><a href="Planos">PLANOS</a></li>
+          <li><a href="Sobre">SOBRE</a></li>
+          <li><a href="Serviços">SERVIÇOS</a></li>
+          <li><a href="contato">CONTATOS</a></li>
+        </ul>
+        <a href="#" class="action_btn">Area do cliente</a>
+        <div class="toggle_btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <div class="dropdown_menu">
+          <li><a href="planos">PLANOS</a></li>
+          <li><a href="Sobre">SOBRE</a></li>
+          <li><a href="Serviços">SERVIÇOS</a></li>
+          <li><a href="contato">CONTATOS</a></li>
+      <li><a href="#" class="action_btn">FALAR COM ATENDIMENTO</a></li>
+    </div>
+    </header>
+
+    <section class="slider">
+    <div class="slider-content">
+
+      <input type="radio" name="btn-radio" id="radio1">
+      <input type="radio" name="btn-radio" id="radio2">
+      <input type="radio" name="btn-radio" id="radio3">
+
+      <div class="slide-box primeiro">
+        <img class="img-desktop" src="4.png" alt="slide 1">
+        <img class="img-mobile" src="1.png" alt="slide 1">
+      </div>
+
+      <div class="slide-box">
+        <img class="img-desktop" src="5.png" alt="slide 2">
+        <img class="img-mobile" src="2.png" alt="slide 2">
+      </div>
+
+      <div class="slide-box">
+        <img class="img-desktop" src="6.png" alt="slide 3">
+        <img class="img-mobile" src="3.png" alt="slide 3">
+      </div>
+
+    <div class="nav-auto">
+        <div class="auto-btn1"></div>
+        <div class="auto-btn2"></div>
+        <div class="auto-btn3"></div>
+      </div>
+
+      <div class="nav-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+      </div>
+
+  </div>
+    </section>
+
+    <main class="cards">
+      <section class="card contact">
+          <div class="icon">
+              <img src="assets/engrenagem.png" alt="Contact us.">
+          </div>
+          <h3>OS MELHORES PLANOS.</h3>
+          <span>A Connect Link possui planos de acesso que atendem tanto quem precisa de pouca ou muita velocidade.</span>
+          
+      </section>
+      <section class="card shop">
+          <div class="icon">
+              <img src="assets/wifi.png" alt="Shop here.">
+          </div>
+          <h3>ALTA TECNOLOGIA.</h3>
+          <span>Trabalhamos com o que há de mais moderno para garantir melhor conexão para você cliente.</span>
+          
+      </section>
+      <section class="card about">
+          <div class="icon">
+              <img src="assets/velocimetro.png" alt="About us.">
+          </div>
+          <h3>TRÁFEGO ILIMITADO.</h3>
+          <span>Acesse seus sites, baixe músicas e assista vídeos sem se preocupar com limites de tráfego.</span>
+          
+      </section>
+  </main>
+
+    <section class="conteudo">
+      <h2 class="efeito-texto">ESCOLHA SEU PLANO</h2>
+      <p class="efeito-texto">Encontre a melhor opção para suas necessidades e aproveite todos os benefícios.</p>
+  </section>
+
+
+<!-- Ícone do Instagram 
+
+  <section class="planos">
+    <div class="carousels-container">
+    <div class="wrapper">
+      <input type="radio" name="slider2" id="tab-1"checked>
+      <input type="radio" name="slider2" id="tab-2" >
+      <input type="radio" name="slider2" id="tab-3">
+  
+      <header class="header1">
+        <label for="tab-1" class="tab-1">Premium</label>
+        <label for="tab-2" class="tab-2">Standard</label>
+        <label for="tab-3" class="tab-3">Novo</label>
+        <div class="slider2"></div>
+      </header>
+  
+      <div class="card-area">
+        <div class="cards">
+          <div class="row row-1">
+            <div class="price-details">
+              <p>100 MEGA + APP PREMIUM</p>
+              <hr>
+              <span class="price">100</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>100 MB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP PREMIUM</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+          <div class="row">
+            <div class="price-details">
+              <p>Para clientes Standard</p>
+              <hr>
+              <span class="price">110</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>100 MB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP STANDARD</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+          <div class="row">
+            <div class="price-details">
+              <p>Extra</p>
+              <hr>
+              <span class="price">00</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>00 GB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP ---------</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+        </div>
+      </div>
+      <button>Escolher Plano</button>
+    </div>
+  
+    <div class="wrapper">
+      <input type="radio" name="slider2" id="tab-1-1">
+      <input type="radio" name="slider2" id="tab-2-1" >
+      <input type="radio" name="slider2" id="tab-3-1">
+      <header class="header1">
+        <label for="tab-1-1" class="tab-1">Standard</label>
+        <label for="tab-2-1" class="tab-2">Premium</label>
+        <label for="tab-3-1" class="tab-3">Novo</label>
+        <div class="slider2"></div>
+      </header>
+      <div class="card-area">
+        <div class="cards">
+          <div class="row row-1">
+            <div class="price-details">
+              <p>100 MEGA + APP PREMIUM</p>
+              <hr>
+              <span class="price">100</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>100 MB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP PREMIUM</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+          <div class="row">
+            <div class="price-details">
+              <p>Para clientes Standard</p>
+              <hr>
+              <span class="price">110</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>100 MB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP STANDARD</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+          <div class="row">
+            <div class="price-details">
+              <p>Extra</p>
+              <hr>
+              <span class="price">00</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>00 GB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP ---------</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+        </div>
+      </div>
+      <button>Escolher Plano</button>
+    </div>
+    <div class="wrapper">
+      <input type="radio" name="slider2" id="tab-1-2">
+      <input type="radio" name="slider2" id="tab-2-2" >
+      <input type="radio" name="slider2" id="tab-3-2">
+      <header class="header1">
+        <label for="tab-1-2" class="tab-1">Standard</label>
+        <label for="tab-2-2" class="tab-2">Premium</label>
+        <label for="tab-3-2" class="tab-3">Novo</label>
+        <div class="slider2"></div>
+      </header>
+      <div class="card-area">
+        <div class="cards">
+          <div class="row row-1">
+            <div class="price-details">
+              <p>100 MEGA + APP PREMIUM</p>
+              <hr>
+              <span class="price">100</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>100 MB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP PREMIUM</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+          <div class="row">
+            <div class="price-details">
+              <p>Para clientes Standard</p>
+              <hr>
+              <span class="price">110</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>100 MB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP STANDARD</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+          <div class="row">
+            <div class="price-details">
+              <p>Extra</p>
+              <hr>
+              <span class="price">00</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>00 GB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP ---------</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+        </div>
+      </div>
+      <button>Escolher Plano</button>
+    </div>
+  
+    <div class="wrapper">
+      <input type="radio" name="slider2" id="tab-1-3">
+      <input type="radio" name="slider2" id="tab-2-3" >
+      <input type="radio" name="slider2" id="tab-3-3">
+      <header class="header1">
+        <label for="tab-1-3" class="tab-1">Standard</label>
+        <label for="tab-2-3" class="tab-2">Premium</label>
+        <label for="tab-3-3" class="tab-3">Novo</label>
+        <div class="slider2"></div>
+      </header>
+      <div class="card-area">
+        <div class="cards">
+          <div class="row row-1">
+            <div class="price-details">
+              <p>100 MEGA + APP PREMIUM</p>
+              <hr>
+              <span class="price">100</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>100 MB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP PREMIUM</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+          <div class="row">
+            <div class="price-details">
+              <p>Para clientes Standard</p>
+              <hr>
+              <span class="price">110</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>100 MB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP STANDARD</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+          <div class="row">
+            <div class="price-details">
+              <p>Extra</p>
+              <hr>
+              <span class="price">00</span>
+            </div>
+            <ul class="features">
+              <li><i class="fa-solid fa-download"></i><span>00 GB de velocidade sem limite de download</span></li>
+              <li><i class="fa-solid fa-wifi"></i><span>100% Fibra Óptica</span></li>
+              <li><i class="fa-solid fa-money-check-dollar"></i><span>Clube de Descontos exclusivo Connect Link</span></li>
+              <li><i class="fa-solid fa-mobile-screen-button"></i><span>+ APP ---------</span></li>
+            </ul>
+            <div class="imagens-apps">
+              <img src="Img_apps/app1.png" alt="App 1">
+              <img src="Img_apps/app2.png" alt="App 2">
+              <img src="Img_apps/app3.png" alt="App 3">
+              <img src="Img_apps/app4.png" alt="App 4">
+              <img src="Img_apps/app5.png" alt="App 5">
+              <img src="Img_apps/app6.png" alt="App 6">
+          </div>
+          </div>
+        </div>
+      </div>
+      <button>Escolher Plano</button>
+    </div>
+  </section>
+
+  -->
+
+
+  <section class="swiper-section">
+    <div class="swiper-container">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="slide-content">
+                <img src="11.png" alt="Imagem">
+                <div class="slide-overlay">
+                    <h3>CONFIRA AGORA</h3>
+                    <p>Promoção por tempo limitado</p>
+                    <a href="#" class="btn-escolher">Escolher Plano</a>
+                </div>
+            </div>
+        </div>
+          <div class="swiper-slide">
+            <div class="slide-content">
+                <img src="11.png" alt="Imagem">
+                <div class="slide-overlay">
+                    <h3>CONFIRA AGORA</h3>
+                    <p>Promoção por tempo limitado</p>
+                    <a href="#" class="btn-escolher">Escolher Plano</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="slide-content">
+              <img src="11.png" alt="Imagem">
+              <div class="slide-overlay">
+                  <h3>CONFIRA AGORA</h3>
+                  <p>Promoção por tempo limitado</p>
+                  <a href="#" class="btn-escolher">Escolher Plano</a>
+              </div>
+          </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="slide-content">
+            <img src="11.png" alt="Imagem">
+            <div class="slide-overlay">
+                <h3>CONFIRA AGORA</h3>
+                <p>Promoção por tempo limitado</p>
+                <a href="#" class="btn-escolher">Escolher Plano</a>
+            </div>
+        </div>
+    </div>
+    <div class="swiper-slide">
+      <div class="slide-content">
+          <img src="11.png" alt="Imagem">
+          <div class="slide-overlay">
+              <h3>CONFIRA AGORA</h3>
+              <p>Promoção por tempo limitado</p>
+              <a href="#" class="btn-escolher">Escolher Plano</a>
+          </div>
+      </div>
+  </div>
+  <div class="swiper-slide">
+    <div class="slide-content">
+        <img src="11.png" alt="Imagem">
+        <div class="slide-overlay">
+            <h3>CONFIRA AGORA</h3>
+            <p>Promoção por tempo limitado</p>
+            <a href="#" class="btn-escolher">Escolher Plano</a>
+        </div>
+    </div>
+</div>
+  
+        </div>
+      </div>
+  
+      </div>
+      <div class="swiper-button-prev">
+        <i class="bx bx-left-arrow-alt"></i>
+  
+      </div>
+  
+      <div class="swiper-button-next">
+        <i class="bx bx-right-arrow-alt"></i>
+  
+      </div>
+  
+    </div>
+  </section>
+
+
+  <section class="conteudo1">
+    <h2 class="efeito-texto1">PLANOS SKY TV</h2>
+    <p>Sua TV por Assinatura com os melhores canais locais, regionais, nacionais e internacionais.</p>
+</section>
+
+
+  <!--parte sky-->
+
+  <section class="skytv">
+    <div class="container2">
+      <div class="sky-img">
+        <img src="Img_apps/sky.png" alt="Skyplanostv">
+      </div>
+        <ul class="features">
+          <li><i class="fa-solid fa-check"></i><span>TV e Streaming juntos</span></li>
+          <li><i class="fa-solid fa-check"></i><span>TV e Streaming juntos</span></li>
+          <li><i class="fa-solid fa-check"></i><span>TV e Streaming juntos</span></li>
+          <li><i class="fa-solid fa-check"></i><span>TV e Streaming juntos</span></li>
+          <li><i class="fa-solid fa-check"></i><span>TV e Streaming juntos</span></li>
+          <li><i class="fa-solid fa-check"></i><span>TV e Streaming juntos</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Canais de esportes</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Mais de 70 canais</span></li>
+          <li><i class="fa-solid fa-check"></i><span>Milhares de Filmes e Séries</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="carousel1">
+    <button id="prev-btn1" class="carousel-btn1">&#10094;</button>
+    <div class="carousel-container1">
+      <div class="carousel-track1">
+        <img src="/sky_icon/cn.png.png" alt="App 1">
+        <img src="/sky_icon/boom.png" alt="App 2">
+        <img src="/sky_icon/cnn.png" alt="App 3">
+        <img src="/sky_icon/ds.png" alt="App 4">
+        <img src="/sky_icon/gloob.png" alt="App 5">
+        <img src="/sky_icon/tnt.png" alt="App 6">
+        <img src="/sky_icon/xd.png" alt="App 7">
+        <img src="/sky_icon/cn.png.png" alt="App 8">
+        <img src="/sky_icon/cn.png.png" alt="App 9">
+        <img src="/sky_icon/cn.png.png" alt="App 10">
+        <img src="/sky_icon/cn.png.png" alt="App 11">
+      </div>
+    </div>
+    <button id="next-btn1" class="carousel-btn1">&#10095;</button>
+  </div>
+  
+  
+
+
+  <div class="faixa">
+    <div class="item">
+      <i class="fa-solid fa-barcode" style="font-size: 30px;" ></i>
+      <h3 style="margin-top: 20px;" >2° Via da Fatura</h3>
+      <button>Acessar</button>
+    </div>
+    <div class="item">
+      <i class="fa-solid fa-gauge" style="font-size: 30px;"></i>
+      <h3 style="margin-top: 20px;">Teste de Velocidade</h3>
+      <button>Acessar</button>
+    </div>
+    <div class="item">
+      <i class="fa-solid fa-user" style="font-size: 30px;"></i>
+      <h3 style="margin-top: 20px;" >Área do Cliente</h3>
+      <button>Acessar</button>
+    </div>
+  </div>
+
+
+
+
+  <section class="appMes">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 my-auto">
+          <h2 class="text-light display-4">Baixe agora o nosso App. <br>É fácil e rápido.</h2>
+          <h5 class="text-light font-weight-normal pb-4">Com o nosso App é possível consultar histórico de faturas, emissão de 2° via de boleto, nf-e, gerenciar o consumo, entre outras funções.</h5>
+  
+          <!-- Imagens pequenas dentro da mesma div do texto -->
+          <div class="app-buttons">
+            <a href="https://play.google.com/store/apps/details?id=br.com.connectlinksp.appclientes" target="_blank">
+              <img src="googleplay.png" alt="Google Play" class="img-fluid app-icon">
+            </a>
+            <a href="https://apps.apple.com/us/app/connect-link/idxxxxx" target="_blank">
+              <img src="appstore.png" alt="Apple Store" class="img-fluid app-icon">
+            </a>
+          </div>
+        </div>
+  
+        <div class="col-lg-4">
+          <a href="https://play.google.com/store/apps/details?id=br.com.connectlinksp.appclientes" alt="App connect Link">
+            <img alt="APP connect LinkÁrea do cliente Android" src="Img_apps/mockup-app.png" class="img-fluid">
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+
+
+
+  <article class="article-card">
+
+    <div class="img-box">
+      <img src="descontos.png" alt="" class="article-banner">
+    </div>
+
+
+    <div class="article-content">
+
+      <a href="">
+        <h3 class="article-title">SOBRE NÓS.</h3>
+      </a>
+
+      <p class="article-text">A Connect link surgiu através da necessidade da implantação de um serviço de internet para regiões até então, não eram atendidas por nenhuma operadora grande. Nesse momento, enxergamos a carência da região, e logo iniciamos as instalações para suprir a necessidade da região.
+
+        Somos profissionais de confiança e com ótima experiência. Ouvimos os nossos clientes e trabalhamos com eles para suprir as suas necessidades através de soluções inovadoras e tecnológicas. Cuidamos dos nossos clientes de forma personalizada, com toda seriedade e comprometimento.</p>
+        <button>Saiba Mais</button>
+    </div>
+
+  </article>
+
+
+  <footer>
+    <div id="footer_content">
+        <div id="footer_contacts">
+          <div class="logo"><a href="index.html"><img src="Img_apps/logo2.png" alt="Logo" class="logo-img-logo"></a></div>
+            <p>Conectando Vidas.</p>
+
+            <div id="footer_social_media">
+                <a href="#" class="footer-link" id="instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#" class="footer-link" id="facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="footer-link" id="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+        
+        <ul class="footer-list">
+            <li>
+                <h3>Midia</h3>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Instagram</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">E-mail</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Tik Tok</a>
+            </li>
+        </ul>
+
+        <ul class="footer-list">
+            <li>
+                <h3>Produtos</h3>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Planos</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Serviços</a>
+            </li>
+            <li>
+                <a href="#" class="footer-link">Contatos</a>
+            </li>
+        </ul>
+
+        <div id="footer_subscribe">
+            <h3>Politica de privacidade</h3>
+
+            <p>
+              <div class="logo"><a href="#"><img src="Img_apps/anatel.png" alt="Logo" class="logo-img-logo"></a></div>
+            </p>
+
+            
+            </div>
+        </div>
+    </div>
+
+    <div id="footer_copyright">
+        &#169
+        2025 todos os direitos reservados.
+    </div>
+</footer>
+
+<div id="whatsapp-container"></div>
+
+<script>
+  fetch('whatsapp-button.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('whatsapp-container').innerHTML = html;
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
