@@ -23,7 +23,6 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  allowTouchMove: !isMobile(), // Desativa no mobile
-  touchStartPreventDefault: true, 
+  touchStartPreventDefault: true,
   touchMoveStopPropagation: true
 });
