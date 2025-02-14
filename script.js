@@ -51,35 +51,34 @@ const nextButton = document.getElementById('next-btn1');
 function cloneImages() {
   const clonedImages = [...images].map(image => image.cloneNode(true));
   clonedImages.forEach(img => track.appendChild(img)); // Adiciona as imagens clonadas no final
+  track.style.width = `${(images.length * 2) * (images[0].width + 10)}px`; // Ajusta a largura total
 }
 
 // Função para mover para o próximo conjunto de imagens
 function moveToNext() {
-  if (currentIndex + imagesPerSlide < totalImages * 2) {
-    currentIndex++;
-    track.style.transition = 'transform 0.3s ease-out'; // Transição rápida
-    track.style.transform = `translateX(-${currentIndex * (images[0].width + 10)}px)`;
-  } else {
-    // Quando chegar no final, volta rapidamente para o início
-    track.style.transition = 'none';
-    currentIndex = 0;
-    track.style.transform = `translateX(-${currentIndex * (images[0].width + 10)}px)`;
-    
-    // Aguarda um pequeno tempo e reativa a transição para continuar o movimento
+  if (currentIndex + imagesPerSlide >= totalImages) {
+    currentIndex = 0; // Volta para a primeira imagem
+    track.style.transition = 'none'; // Remove transição
+    track.style.transform = `translateX(0)`; // Volta para a posição inicial sem transição
     setTimeout(() => {
-      track.style.transition = 'transform 0.3s ease-out';
-      track.style.transform = `translateX(-${currentIndex * (images[0].width + 10)}px)`;
+      track.style.transition = 'transform 0.3s ease-out'; // Transição suave
+      track.style.transform = `translateX(-${currentIndex * (images[0].width + 10)}px)`; // Continua a transição suave
     }, 50);
+  } else {
+    currentIndex++;
+    track.style.transition = 'transform 0.3s ease-out'; // Transição suave
+    track.style.transform = `translateX(-${currentIndex * (images[0].width + 10)}px)`;
   }
 }
 
 // Função para mover para o conjunto anterior de imagens
 function moveToPrev() {
   if (currentIndex === 0) {
-    currentIndex = totalImages - imagesPerSlide;
+    currentIndex = totalImages - imagesPerSlide; // Volta para o final se estiver na primeira imagem
   } else {
     currentIndex--;
   }
+  track.style.transition = 'transform 0.3s ease-out';
   track.style.transform = `translateX(-${currentIndex * (images[0].width + 10)}px)`;
 }
 
@@ -105,6 +104,7 @@ function resetInterval() {
 
 // Chama a função de clonagem de imagens assim que o script for executado
 cloneImages();
+
 
 
 

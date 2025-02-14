@@ -765,27 +765,38 @@ hr {
 
 
 
+/* Container principal */
 .faixa {
   background-color: #171717;
   display: flex;
+  flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte em telas menores */
   justify-content: center;
   gap: 30px;
   padding: 60px;
-
+  background-image: url('ultimo.png');
+  background-size: cover;  /* A imagem cobre toda a área */
+  background-position: center;  /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
 }
 
+/* Cada item dentro da faixa */
 .item {
   text-align: center;
   color: rgb(255, 255, 255);
+  flex: 1 1 250px; /* Ajusta a largura do item de forma responsiva */
+  max-width: 300px; /* Impede que o item fique maior do que isso */
+  padding: 20px;
 }
 
+/* Ícone dentro do item */
 .icon2 {
-  font-size: 1000px;
+  font-size: 100px; /* Ajustei o tamanho para não ficar exagerado */
   display: block;
   margin-bottom: 30px;
 }
 
-button {
+/* Estilo do botão */
+.faixa button {
   margin-top: 30px;
   background-color: white;
   color: #0044cc;
@@ -795,11 +806,38 @@ button {
   cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
+  width: 100%; /* Faz o botão ocupar toda a largura do item */
 }
 
-button:hover {
+/* Efeito do hover no botão */
+.faixa button:hover {
   background-color: #002266;
   color: white;
+}
+
+/* Media query para dispositivos móveis */
+@media (max-width: 768px) {
+  /* Ajusta o espaçamento e largura dos itens */
+  .faixa {
+    padding: 30px;
+  }
+
+  /* Ajusta o tamanho do ícone para telas menores */
+  .icon2 {
+    font-size: 80px;
+  }
+
+  /* Garante que os itens ocupem toda a largura em telas pequenas */
+  .item {
+    flex: 1 1 100%; /* Itens ocupam 100% da largura */
+    max-width: none; /* Remove o limite de largura */
+  }
+
+/* Botão se adapta bem ao tamanho da tela */
+.faixa button {
+  width: auto;
+  padding: 12px 25px;
+}
 }
 
 
