@@ -105,11 +105,13 @@
 }
 
 .tranding-slide-content .tranding-slide-content-bottom {
-  position: absolute;
+  position: relative;
   bottom: 2rem;
   left: 2rem;
   color: var(--white);
 }
+
+
 
 .food-rating {
   padding-top: 1rem;
@@ -230,5 +232,47 @@
   .tranding-slider-control .slider-arrow {
     width: 2.5rem;
     height: 2.5rem;
+  }
+}
+
+
+.tranding-slide-content-bottom1 {
+  position: absolute;
+  bottom: 0; /* Alinha a parte inferior */
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Ajusta o alinhamento exato */
+  width: 100%; /* Garante que ocupe toda a largura */
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  padding: 15px 0; /* Ajusta o espaçamento entre o botão e a borda */
+}
+
+.choose-plan-btn {
+  padding: 12px 24px; /* Tamanho do botão */
+  background-color: transparent; /* Torna o botão transparente */
+  color: #007bff; /* Cor do texto */
+  border: 2px solid #007bff; /* Borda com a mesma cor do texto */
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Efeito suave para transições */
+}
+
+/* Efeito quando o botão é clicado */
+.choose-plan-btn:active {
+  background-color: #007bff; /* Cor de fundo ao clicar */
+  color: white; /* Cor do texto ao clicar */
+}
+
+/* Efeito ao passar o mouse (hover) */
+.choose-plan-btn:hover {
+  background-color: #007bff; /* Cor de fundo ao passar o mouse */
+  color: white; /* Cor do texto ao passar o mouse */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .choose-plan-btn {
+    margin-top: -15px; /* Move o botão um pouco para cima */
   }
 }
