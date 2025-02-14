@@ -10,7 +10,7 @@ body {
   font-family: 'Merriweather', serif; /* Fonte elegante */
   background-repeat: no-repeat; /* Impede que a imagem se repita */
   background-color: #070719;
-  background-image: url('ultimo.png');
+  background-image: url('');
   background-size: cover;
   background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
   background-position: center;
@@ -300,6 +300,32 @@ main.cards section.card.about {
   line-height: 1.6;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 5rem; /* Reduz o tamanho da fonte do título em tablets */
+  }
+
+  .descricao {
+    font-size: 0.8em; /* Ajusta o tamanho do texto */
+    line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 3.5rem; /* Reduz ainda mais o tamanho do título para smartphones */
+  }
+
+  .descricao {
+    font-size: 0.7em; /* Ajusta o tamanho do texto */
+    line-height: 1.4; /* Ajusta o espaçamento entre as linhas */
+  }
+
+  .conteudo {
+    padding: 15px; /* Reduz o padding em telas menores */
+  }
+}
 
 /*planos*/
 
@@ -615,32 +641,29 @@ hr {
 
 
 /*sky */
-
-.skytv .container2{
+.skytv .container2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 120px; /* Aumentando o espaçamento entre a imagem e o texto */
   margin: 10px 0;
+  text-align: center; /* Garante que o texto fique centralizado */
 }
 
-.skytv .sky-img{
+.skytv .sky-img {
   flex: 0 0 300px;
   width: 50%;
   justify-content: center;
 }
 
-.skytv .sky-img img{
+.skytv .sky-img img {
   width: 300px; /* Define a largura da imagem */
   height: 300px; /* Define a altura da imagem */
   border-radius: 50%; /* Torna a imagem redonda */
   object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
 }
 
-
-
 /*sky mobile */
-
 @media (max-width: 768px) {
   .skytv .container2 {
     flex-direction: column; /* Empilha os elementos na vertical */
@@ -670,11 +693,12 @@ hr {
 
 
 
+/* Carrossel */
 .carousel1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   width: 100%;
   overflow: hidden;
   padding: 15px 0;
@@ -682,31 +706,55 @@ hr {
 }
 
 .carousel-container1 {
-  width: 800px; /* Ajustado para sempre mostrar 5 imagens */
+  width: 100%; /* Responsivo: o carrossel ocupa toda a largura disponível */
+  max-width: 1200px; /* Limita a largura para telas maiores */
   overflow: hidden;
 }
 
 .carousel-track1 {
   display: flex;
-  gap: 10px;
+  gap: 10px; /* Espaço menor entre as imagens */
   transition: transform 0.5s ease-in-out;
 }
 
 .carousel-track1 img {
-  width: 70px; /* Tamanho menor */
-  height: 70px;
+  width: 50px; /* Reduz o tamanho das imagens */
+  height: 50px; 
   object-fit: cover;
   border-radius: 12px;
 }
 
+/* Botões do carrossel */
 .carousel-btn1 {
-  background-color: #0000;
+  background-color: transparent;
   border: none;
   padding: 10px;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 24px;
   border-radius: 50%;
   color: white;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn1:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Adiciona um efeito visual ao passar o mouse */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .carousel-container1 {
+    width: 100%; /* O carrossel ocupa 100% da largura */
+    max-width: 100%; /* Remove o limite de largura */
+  }
+
+  .carousel-track1 img {
+    width: 40px; /* Ajusta o tamanho das imagens para dispositivos móveis */
+    height: 40px;
+  }
+
+  .carousel-btn1 {
+    font-size: 18px; /* Reduz o tamanho dos botões no mobile */
+  }
 }
 
   
