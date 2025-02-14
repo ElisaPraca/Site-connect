@@ -18,39 +18,42 @@ body {
 
 }
 
-li{
+/* Cabeçalho */
+/* Remover a lista de estilo */
+li {
   list-style: none;
 }
 
-a{
-text-decoration: none;
-color: #fff;
-font-size: 1rem;
+a {
+  text-decoration: none; /* Garantir que não haja sublinhado nos links */
+  color: #fff;
+  font-size: 1rem;
 }
 
 a:hover {
   color: #00008B;
+  text-decoration: none; /* Remover sublinhado também no hover */
 }
 
-/*Cabeçario*/
-
-header{
+/* Cabeçalho */
+header {
   width: 100%;
-  padding: 60px 4%;
+  padding: 20px 4%;
   position: fixed;
   top: 0;
   left: 0;
-  transition: 0.5s;
   z-index: 10;
+  background: #030303; /* Cor de fundo para o cabeçalho fixo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar o cabeçalho */
 }
 
-
-header.rolagem{
+/* Cabeçalho com a rolagem */
+header.rolagem {
   background: linear-gradient(to right, #030303, #030303);
   padding: 20px 4%;
 }
 
-header.rolagem a, header.rolagem i{
+header.rolagem a, header.rolagem i {
   color: #fff;
 }
 
@@ -70,23 +73,23 @@ header.rolagem a, header.rolagem i{
 }
 
 .logo-img-logo {
-  width: 150px;  /* Ajuste o tamanho conforme necessário */
+  width: 150px; /* Ajuste o tamanho conforme necessário */
   height: auto; /* Mantém a proporção da imagem */
 }
 
 .navbar .links {
-display: flex;
-gap: 2rem;
+  display: flex;
+  gap: 2rem;
 }
 
-.navbar .toggle_btn{
+.navbar .toggle_btn {
   color: #fff;
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
 }
 
-.action_btn{
+.action_btn {
   background-color: #002266;
   color: #fff;
   padding: 0.5rem 1rem;
@@ -96,7 +99,7 @@ gap: 2rem;
   font-size: 0.8rem;
   font-weight: bold;
   cursor: pointer;
-  transition: scale 0.2 ease;
+  transition: scale 0.2s ease;
 }
 
 .action_btn:hover {
@@ -104,11 +107,11 @@ gap: 2rem;
   color: #fff;
 }
 
-.action_btn:active{
+.action_btn:active {
   scale: 0.95;
 }
 
-/* DROPDOWN MENU*/
+/* Menu Dropdown */
 .dropdown_menu {
   display: none;
   position: absolute;
@@ -120,7 +123,7 @@ gap: 2rem;
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
-  transition: heigth 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .dropdown_menu.open {
@@ -134,37 +137,52 @@ gap: 2rem;
   justify-content: center;
 }
 
-.dropdown_menu .action_btn{
+.dropdown_menu .action_btn {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 
+/* Responsividade */
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
 
-/*RESPONSIVIDADE*/
+  .navbar .toggle_btn {
+    display: block;
+  }
 
-@media (max-width: 992px){
-.navbar .links,
-.navbar .action_btn{
-  display: none;
-}
-
-.navbar .toggle_btn{
-  display: block;
-}
-
-.dropdown_menu {
-  display: block;
-}
-
+  .dropdown_menu {
+    display: block;
+  }
 }
 
 @media (max-width: 576px) {
-.dropdown_menu{
-  left: 2rem;
-  width: unset;
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
 }
+
+/* Espaço para o cabeçalho fixo (garantindo que o conteúdo não sobreponha o cabeçalho) */
+body {
+  margin-top: 100px; /* Ajuste o valor com base na altura do seu cabeçalho */
+  padding-top: 0;
 }
+
+/* Adicionando espaço ao conteúdo para não ser coberto pelo cabeçalho */
+.content {
+  margin-top: 60px; /* Esse valor deve ser igual à altura do cabeçalho */
+}
+
+/* Ajustes de layout para o conteúdo */
+.main-content {
+  padding: 20px;
+}
+
+
 
 main.cards {
   display: flex;
