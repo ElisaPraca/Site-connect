@@ -48,6 +48,11 @@
   }
 }
 
+#tranding {
+  padding-top: 0;  /* Removendo padding superior */
+  padding-bottom: 0;  /* Removendo padding inferior */
+}
+
 #tranding .tranding-slider {
   height: 40rem;
   padding: 2rem 0;

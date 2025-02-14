@@ -1,6 +1,11 @@
+// Função para detectar dispositivos móveis
+function isMobile() {
+  return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+}
+
 var TrandingSlider = new Swiper('.tranding-slider', {
   effect: 'coverflow',
-  grabCursor: true,
+  grabCursor: true,  // Permite o cursor no desktop
   centeredSlides: true,
   loop: true,
   slidesPerView: 'auto',
@@ -18,5 +23,7 @@ var TrandingSlider = new Swiper('.tranding-slider', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  allowTouchMove: false // Desativa o arrastar no mobile
+  allowTouchMove: !isMobile(), // Desativa no mobile
+  touchStartPreventDefault: true, 
+  touchMoveStopPropagation: true
 });

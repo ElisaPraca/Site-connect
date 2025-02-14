@@ -123,36 +123,6 @@ cloneImages();
     }, 10000); // 10 segundos
   };
 
-  var swiper = new Swiper(".swiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true, // Mantém o slide centralizado
-    slidesPerView: "auto", // Ajusta dinamicamente
-    loop: true, // Ativa o loop
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 100,
-      modifier: 4,
-      slideShadows: true
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev"
-    },
-    keyboard: {
-      enabled: true
-    },
-    mousewheel: {
-      thresholdDelta: 70
-    },
-    breakpoints: {
-      320: { slidesPerView: 1 },  // No mobile, mostra 1 slide
-      560: { slidesPerView: 1.5 }, // Ajusta no mobile maior
-      768: { slidesPerView: 2 },  // Dois slides visíveis no tablet
-      1024: { slidesPerView: 3 }  // No desktop, 3 slides aparecem
-    }
-});
 
 
 
