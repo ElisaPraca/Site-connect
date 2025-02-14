@@ -17,14 +17,12 @@
   background: #f9f9f9;
 }
 
-/* Container principal */
 .container3 {
   max-width: 124rem;
   padding: 0 1rem;
   margin: 0 auto;
 }
 
-/* Texto */
 .section-subheading {
   color: white;
   font-size: 12px;
@@ -40,7 +38,6 @@
   padding: 2rem 0;
 }
 
-/* Tranding */
 #tranding {
   padding: 4rem 0;
 }
@@ -57,14 +54,12 @@
   position: relative;
 }
 
-/* Ajustes para telas menores */
 @media (max-width:500px) {
   #tranding .tranding-slider {
     height: 32rem;
   }
 }
 
-/* Slide */
 .tranding-slide {
   width: 27rem;
   height: 32rem;
@@ -73,17 +68,15 @@
 
 @media (max-width:500px) {
   .tranding-slide {
-    width: 100% !important;
-    height: auto !important;
+    width: 28rem !important;
+    height: 36rem !important;
   }
-
   .tranding-slide .tranding-slide-img img {
-    width: 100% !important;
-    height: auto !important;
+    width: 28rem !important;
+    height: 36rem !important;
   }
 }
 
-/* Imagem */
 .tranding-slide .tranding-slide-img img {
   width: 27rem;
   height: 32rem;
@@ -91,7 +84,6 @@
   object-fit: contain;
 }
 
-/* Conteúdo */
 .tranding-slide .tranding-slide-content {
   position: absolute;
   left: 0;
@@ -114,7 +106,6 @@
   color: var(--white);
 }
 
-/* Rating */
 .food-rating {
   padding-top: 1rem;
   display: flex;
@@ -125,42 +116,60 @@
   color: var(--primary);
 }
 
-/* Oculta sombras */
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
   display: none;
 }
 
-/* Controle do slider */
 .tranding-slider-control {
-  position: absolute;
-  bottom: 1rem;
-  width: 100%;
+  position: relative;
+  bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
-}
-
-/* Ajuste do espaçamento das setas */
-.tranding-slider-control .swiper-button-next,
-.tranding-slider-control .swiper-button-prev {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 3.5rem;
-  height: 3.5rem;
-  background: var(--white);
-  border-radius: 50%;
-  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
-}
-
-.tranding-slider-control .swiper-button-prev {
-  left: 10%;
 }
 
 .tranding-slider-control .swiper-button-next {
-  right: 10%;
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 70% !important;
+    transform: translateX(-70%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-next {
+    left: 80% !important;
+    transform: translateX(-80%) !important;
+  }
+}
+
+@media (max-width:990px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 30% !important;
+    transform: translateX(-30%) !important;
+  }
+}
+
+@media (max-width:450px) {
+  .tranding-slider-control .swiper-button-prev {
+    left: 20% !important;
+    transform: translateX(-20%) !important;
+  }
+}
+
+.tranding-slider-control .slider-arrow {
+  background: var(--white);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
 }
 
 .tranding-slider-control .slider-arrow ion-icon {
@@ -168,22 +177,10 @@
   color: #fff;
 }
 
-/* Ajustes para mobile */
-@media (max-width:500px) {
-  .tranding-slider-control {
-    bottom: 0.5rem;
-  }
-
-  .tranding-slider-control .swiper-button-prev {
-    left: 5%;
-  }
-
-  .tranding-slider-control .swiper-button-next {
-    right: 5%;
-  }
+.tranding-slider-control .slider-arrow::after {
+  content: '';
 }
 
-/* Paginação */
 .tranding-slider-control .swiper-pagination {
   position: relative;
   width: 15rem;
@@ -196,4 +193,37 @@
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--primary);
+}
+
+/* Ajustes para telas pequenas (mobile) */
+@media (max-width: 450px) {
+  /* Ajusta a altura do slider */
+  #tranding .tranding-slider {
+    height: 25rem;
+  }
+
+  /* Ajuste de largura das imagens */
+  .tranding-slide .tranding-slide-img img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Ajuste de largura dos slides */
+  .tranding-slide {
+    width: 90% !important;
+    height: auto !important;
+  }
+
+  /* Ajuste do posicionamento das setas */
+  .tranding-slider-control .swiper-button-next,
+  .tranding-slider-control .swiper-button-prev {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .tranding-slider-control .slider-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
