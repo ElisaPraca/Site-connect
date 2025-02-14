@@ -847,7 +847,7 @@ hr {
 /* --------- App M&S --------- */ 
 .appMes {
   background-color: black;
-  border-bottom: 0px solid #00008B; /* Borda azul escura */
+  border-bottom: 1px solid #00008B; /* Borda azul escura */
   padding: 0px 0px; /* Adiciona um espaçamento interno */
 }
 
