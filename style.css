@@ -844,92 +844,139 @@ hr {
 
 
 
-/* ------------ End Campo Acesso Rapido ------------ */
-
 /* --------- App M&S --------- */ 
 .appMes {
   background-color: black;
-   /* Cor de fundo */
-   border-bottom: 2px solid #00008B; /* Borda branca fina embaixo */
+  border-bottom: 2px solid #00008B; /* Borda azul escura */
+  padding: 0px 0px; /* Adiciona um espaçamento interno */
 }
 
 .appMes .container {
   display: flex;
+  flex-direction: column; /* Empilha os elementos no mobile */
   align-items: center;
-  justify-content: space-between;
-  text-align: center; /* Centraliza o conteúdo */
+  text-align: center;
 }
 
 .appMes .row {
   display: flex;
-  justify-content: center; /* Centraliza o conteúdo dentro do row */
+  flex-wrap: wrap; /* Permite que os elementos quebrem para novas linhas */
+  justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 20px;
+  width: 100%;
 }
 
 .appMes .col-lg-8 {
   color: #fff;
   flex: 1;
+  max-width: 700px; /* Define um limite para o conteúdo */
 }
 
 .appMes .col-lg-8 h2 {
-  font-size: 3em;
+  font-size: 2.5em;
   font-weight: 700;
-  margin-bottom: 20px;
-  text-transform: uppercase; /* Deixa o texto em maiúsculas */
-  letter-spacing: 2px; /* Aumenta o espaçamento entre as letras */
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .appMes .col-lg-8 h5 {
-  font-size: 0.8em;
-  margin-bottom: 25px;
-  line-height: 1.8; /* Aumenta o espaçamento entre as linhas do texto */
+  font-size: 1em;
+  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
 .appMes .col-lg-8 .btn {
-  font-size: 1.2em;
-  padding: 12px 40px;
-  background-color: #0000;
+  font-size: 1em;
+  padding: 10px 30px;
+  background-color: transparent;
   color: white;
-  border: 2px solid #0044cc; /* Borda que combina com a cor do botão */
+  border: 2px solid #0044cc;
   transition: all 0.3s ease;
   font-weight: bold;
 }
 
 .appMes .col-lg-8 .btn:hover {
   background-color: #0033a0;
-  border-color: #0033a0; /* Muda a cor da borda ao passar o mouse */
+  border-color: #0033a0;
 }
 
+/* Ajuste para a imagem */
 .appMes .col-lg-4 {
-  flex: 0.5;
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: flex-end; /* Faz a imagem ficar grudada na parte inferior */
-  height: 100%; /* Garante que o flexbox ocupe toda a altura */
+  align-items: center;
+  max-width: 350px;
 }
 
 .appMes .col-lg-4 img {
-  max-width: 75%;
+  max-width: 100%;
   height: auto;
   border-radius: 5px;
-  margin-top: 20px; /* Garante que a imagem fique um pouco abaixo do botão */
-  margin-bottom: 0;
+  margin-top: 20px;
 }
 
-@media (max-width: 716px) {
+/* Responsividade */
+@media (max-width: 768px) {
+  .appMes .container {
+    text-align: center;
+  }
+
+  .appMes .row {
+    flex-direction: column; /* Empilha os elementos no mobile */
+    align-items: center;
+    gap: 15px;
+  }
+
   .appMes .col-lg-8 h2 {
     font-size: 2em; /* Reduz o tamanho da fonte do título */
   }
 
   .appMes .col-lg-8 h5 {
-    font-size: 0.7em; /* Reduz o tamanho do subtítulo */
+    font-size: 0.9em; /* Reduz o tamanho do subtítulo */
+  }
+
+  .appMes .col-lg-8 .btn {
+    font-size: 0.9em;
+    padding: 8px 25px;
   }
 
   .appMes .col-lg-4 {
-    display: none; /* Esconde a imagem */
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .appMes .col-lg-4 img {
+    max-width: 80%; /* Reduz um pouco a imagem */
+    margin-top: 10px;
   }
 }
+
+@media (max-width: 480px) {
+  .appMes {
+    padding: 0px 10px; /* Reduz o espaçamento */
+  }
+
+  .appMes .col-lg-8 h2 {
+    font-size: 1.8em;
+  }
+
+  .appMes .col-lg-8 h5 {
+    font-size: 0.8em;
+  }
+
+  .appMes .col-lg-8 .btn {
+    font-size: 0.8em;
+    padding: 7px 20px;
+  }
+
+  .appMes .col-lg-4 img {
+    max-width: 90%; /* Mantém a imagem em um tamanho adequado */
+  }
+}
+
 
 
 
