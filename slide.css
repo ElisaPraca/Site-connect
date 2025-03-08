@@ -77,18 +77,4 @@ display: flex;
     margin-left: -50%;
 }
 
-@media  screen and (max-width: 900px) {
-    .img-desktop{
-        display: none;
-    }
-
-    .img-mobile{
-        display: block;
-    }
-
-    .nav-auto, .nav-manual{
-        margin-top: 70%;
-    }
-    
-}
 

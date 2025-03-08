@@ -127,3 +127,26 @@ cloneImages();
 
 
 
+
+
+
+
+
+  function toggleAnswer(element) {
+    var answer = element.nextElementSibling;
+    var arrow = element.querySelector('span:last-child');
+    
+    if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+        arrow.innerHTML = '&#x25B6;';
+    } else {
+        var allAnswers = document.querySelectorAll('.faq-answer');
+        var allQuestions = document.querySelectorAll('.faq-question span:last-child');
+        
+        allAnswers.forEach(ans => ans.style.display = 'none');
+        allQuestions.forEach(arr => arr.innerHTML = '&#x25B6;');
+        
+        answer.style.display = 'block';
+        arrow.innerHTML = '&#x25BC;';
+    }
+}

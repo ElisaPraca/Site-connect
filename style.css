@@ -31,7 +31,7 @@ a {
 }
 
 a:hover {
-  color: #00008B;
+  color: #ed8223;
   text-decoration: none; /* Remover sublinhado também no hover */
 }
 
@@ -43,13 +43,13 @@ header {
   top: 0;
   left: 0;
   z-index: 10;
-  background: #030303; /* Cor de fundo para o cabeçalho fixo */
+  background: linear-gradient(to right, #0089cb, #0089cb); /* Cor de fundo para o cabeçalho fixo */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar o cabeçalho */
 }
 
 /* Cabeçalho com a rolagem */
 header.rolagem {
-  background: linear-gradient(to right, #030303, #030303);
+  background: linear-gradient(to right, #0089cb, #0089cb);
   padding: 20px 4%;
 }
 
@@ -90,12 +90,12 @@ header.rolagem a, header.rolagem i {
 }
 
 .action_btn {
-  background-color: #002266;
+  background-color: #ed8223;
   color: #fff;
   padding: 0.5rem 1rem;
   border: none;
   outline: none;
-  border-radius: 20px;
+  border-radius: 15px;
   font-size: 0.8rem;
   font-weight: bold;
   cursor: pointer;
@@ -640,16 +640,18 @@ hr {
 
 
 
-/*sky */
+/* Estilizando a seção principal sky*/
 .skytv .container2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 120px; /* Aumentando o espaçamento entre a imagem e o texto */
+  gap: 40px; /* Espaçamento entre imagem e conteúdo */
   margin: 10px 0;
-  text-align: center; /* Garante que o texto fique centralizado */
+  text-align: center;
+  flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
 }
 
+/* Estilizando a imagem */
 .skytv .sky-img {
   flex: 0 0 300px;
   width: 50%;
@@ -657,37 +659,68 @@ hr {
 }
 
 .skytv .sky-img img {
-  width: 300px; /* Define a largura da imagem */
-  height: 300px; /* Define a altura da imagem */
-  border-radius: 50%; /* Torna a imagem redonda */
-  object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+  width: 650px;
+  height: 400px;
+  border-radius: 2%;
+  object-fit: cover;
 }
 
-/*sky mobile */
+/* Estilizando o conteúdo ao lado da imagem */
+.skytv .sky-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+}
+
+/* Texto acima da lista */
+.skytv .sky-description {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skytv .sky-description h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e36f09;
+  margin-bottom: 5px;
+}
+
+.skytv .sky-description p {
+  font-size: 16px;
+  color: #cfb698;
+}
+
+/* Responsividade para telas menores */
 @media (max-width: 768px) {
   .skytv .container2 {
-    flex-direction: column; /* Empilha os elementos na vertical */
-    text-align: center; /* Centraliza o texto */
-    align-items: center; /* Centraliza tudo na tela */
-    gap: 10px; /* Reduz o espaçamento entre os itens */
+    flex-direction: column;
+    gap: 20px; /* Ajustando o espaçamento */
   }
 
   .skytv .sky-img {
-    display: flex; /* Ativa flexbox */
-    justify-content: center; /* Centraliza a imagem */
-    align-items: center;
-    width: 100%; /* Faz a div ocupar toda a largura */
-    margin-bottom: -20px; /* Aproxima a imagem do texto */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Reduzindo a distância entre a imagem e o texto */
   }
 
   .skytv .sky-img img {
-    width: 180px; /* Ajusta o tamanho da imagem */
-    height: 180px;
+    width: 300px; /* Reduzindo o tamanho da imagem */
+    height: 220px;
   }
 
-  .skytv .features {
-    width: 90%; /* Mantém a lista ajustada à tela */
-    max-width: 400px; /* Define um limite para não ficar muito larga */
+  .skytv .sky-content {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .skytv .sky-description h2 {
+    font-size: 20px;
+  }
+
+  .skytv .sky-description p {
+    font-size: 14px;
   }
 }
 
@@ -765,66 +798,45 @@ hr {
 
 
 
-/* Container principal */
+
+/* Container principal faixa de acesso rapido  */
 .faixa {
-  background-color: #171717;
+  background-color: #0089cb;
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens quebrem para a linha seguinte em telas menores */
+  flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
   justify-content: center;
-  gap: 30px;
-  padding: 60px;
-  background-image: url('ultimo.png');
+  gap: 5px;
+  padding: 0px;
   background-size: cover;  /* A imagem cobre toda a área */
   background-position: center;  /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-repeat: no-repeat; /* Impede repetição da imagem */
 }
 
 /* Cada item dentro da faixa */
 .item {
   text-align: center;
-  color: rgb(255, 255, 255);
-  flex: 1 1 250px; /* Ajusta a largura do item de forma responsiva */
-  max-width: 300px; /* Impede que o item fique maior do que isso */
+  flex: 1 1 250px; /* Ajusta a largura de forma responsiva */
+  max-width: 300px; /* Define um limite para o tamanho do item */
   padding: 20px;
 }
 
-/* Ícone dentro do item */
-.icon2 {
-  font-size: 100px; /* Ajustei o tamanho para não ficar exagerado */
-  display: block;
-  margin-bottom: 30px;
+/* Estilo para as imagens clicáveis */
+.item img {
+  width: 250px; /* Ajuste conforme necessário */
+  height: auto;
+  cursor: pointer; /* Torna a imagem clicável */
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Estilo do botão */
-.faixa button {
-  margin-top: 30px;
-  background-color: white;
-  color: #0044cc;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
-  width: 100%; /* Faz o botão ocupar toda a largura do item */
+/* Efeito ao passar o mouse */
+.item img:hover {
+  transform: scale(1.1); /* Efeito de leve zoom */
 }
 
-/* Efeito do hover no botão */
-.faixa button:hover {
-  background-color: #002266;
-  color: white;
-}
-
-/* Media query para dispositivos móveis */
+/* Responsividade */
 @media (max-width: 768px) {
-  /* Ajusta o espaçamento e largura dos itens */
   .faixa {
-    padding: 30px;
-  }
-
-  /* Ajusta o tamanho do ícone para telas menores */
-  .icon2 {
-    font-size: 80px;
+    padding: 5px;
   }
 
   /* Garante que os itens ocupem toda a largura em telas pequenas */
@@ -833,12 +845,13 @@ hr {
     max-width: none; /* Remove o limite de largura */
   }
 
-/* Botão se adapta bem ao tamanho da tela */
-.faixa button {
-  width: auto;
-  padding: 12px 25px;
+  /* Ajusta o tamanho das imagens para telas menores */
+  .item img {
+    width: 250px; /* Aumenta a largura da imagem no mobile */
+  }
 }
-}
+
+
 
 
 
@@ -932,6 +945,7 @@ hr {
 
   .appMes .col-lg-8 h2 {
     font-size: 2em; /* Reduz o tamanho da fonte do título */
+    padding-top: 20px;
   }
 
   .appMes .col-lg-8 h5 {
@@ -946,6 +960,9 @@ hr {
   .appMes .col-lg-4 {
     max-width: 100%;
     justify-content: center;
+    display: flex;
+    flex-direction: column; /* Garante que as imagens sejam empilhadas */
+    margin-top: auto; /* Faz a última imagem ir para o final */
   }
 
   .appMes .col-lg-4 img {
@@ -1042,6 +1059,21 @@ hr {
   align-items:     center;
 }
 
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6f00; /* Laranja */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65c00; /* Cor mais escura quando o botão for sobrevoado */
+}
+
 /*-----------------------------------*\
 #RESPONSIVE
 \*-----------------------------------*/
@@ -1075,5 +1107,165 @@ hr {
     flex-direction: column;
   }
 }
+
+
+.container7 {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: transparent;
+  color: #e36f09; /* Deixando os textos laranja */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Ajustando os títulos para ficarem laranja */
+.container7 h2 {
+  color: #e36f09;
+}
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+.platforms img {
+  width: 150px;
+  height: 80px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.platforms img:hover {
+  transform: scale(1.1);
+}
+
+/* Espaçamento entre plataformas e botão */
+.cta-button {
+  background-color: #e36f09; /* Mudando o botão para laranja */
+  color: white;
+  font-size: 18px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 30px; /* Aumentando a separação entre o texto e o botão */
+}
+
+.cta-button:hover {
+  background-color: darkorange; /* Um laranja mais escuro ao passar o mouse */
+}
+
+
+
+
+
+.faq-container {
+  display: flex;
+  flex-direction: row; /* Mantém a disposição em linha no desktop */
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-color: #0089cb;
+}
+
+.faq-image {
+  flex: 1; /* A imagem ocupa metade do espaço disponível */
+  background: url('faq.png') no-repeat center center;
+  background-size: contain;
+  height: 400px;
+  width: 100%;
+  max-width: 100%;
+  margin-right: 20px; /* Espaçamento entre imagem e conteúdo */
+}
+
+.faq-content {
+  flex: 1; /* O conteúdo ocupa a outra metade */
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.faq-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.faq-item {
+  margin-top: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: #ed8223;
+}
+
+.faq-answer {
+  display: none;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.faq-question span {
+  font-size: 16px;
+  font-weight: 400;
+  transition: transform 0.3s;
+}
+
+.faq-question.active span:last-child {
+  transform: rotate(90deg);
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .faq-container {
+    flex-direction: column; /* No mobile, a disposição fica em coluna */
+    padding: 5px;
+  }
+  .faq-image {
+    height: 300px;
+    max-width: 300px;
+    margin-top: 0;
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+  }
+  .faq-content {
+    padding: 15px;
+  }
+  .faq-title {
+    font-size: 24px;
+  }
+  .faq-question {
+    font-size: 14px;
+  }
+  .faq-answer {
+    font-size: 12px;
+  }
+}
+
+
+
 
 
