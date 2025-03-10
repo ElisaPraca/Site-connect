@@ -1,103 +1,55 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Accordion</title>
-    <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: #6c63ff;
-            font-family: Arial, sans-serif;
-            margin: 0;
-        }
-        .faq-title {
-            font-size: 24px;
-            font-weight: bold;
-            color: #fff;
-            margin-bottom: 20px;
-        }
-        .faq-container {
-            width: 90%;
-            max-width: 500px;
-        }
-        .faq-item {
-            background: #fff;
-            border-radius: 8px;
-            margin-bottom: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .faq-answer {
-            display: none;
-            padding: 15px;
-            font-size: 14px;
-            color: #444;
-        }
-        .faq-question::after {
-            content: '\276F'; /* Ícone de seta lateral */
-            font-size: 16px;
-            transition: transform 0.3s;
-            display: inline-block;
-        }
-        .faq-item.active .faq-answer {
-            display: block;
-        }
-        .faq-item.active .faq-question::after {
-            transform: rotate(90deg); /* Gira a seta para baixo */
-        }
-        @media (max-width: 768px) {
-            .faq-container {
-                width: 95%;
-            }
-            .faq-question {
-                font-size: 14px;
-            }
-            .faq-answer {
-                font-size: 12px;
-            }
-        }
-    </style>
+    <title>Grade de Imagens</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="faq-title">Perguntas Frequentes</div>
-    <div class="faq-container">
-        <div class="faq-item">
-            <div class="faq-question">O que é um accordion?</div>
-            <div class="faq-answer">Accordion é um componente interativo que permite expandir e recolher conteúdo.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">O que é JavaScript?</div>
-            <div class="faq-answer">JavaScript é uma linguagem de programação usada para criar interatividade em sites.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">O que é CSS?</div>
-            <div class="faq-answer">CSS é uma linguagem de estilos usada para definir a aparência de páginas web.</div>
-        </div>
-        <div class="faq-item">
-            <div class="faq-question">O que é HTML?</div>
-            <div class="faq-answer">HTML é a linguagem de marcação usada para estruturar páginas web.</div>
-        </div>
+
+    <div class="container">
+        <div class="image-box" style="background-image: url('100MEGA.png');"></div>
+        <div class="image-box" style="background-image: url('100MEGA.png');"></div>
+        <div class="image-box" style="background-image: url('100MEGA.png');"></div>
+        <div class="image-box" style="background-image: url('100MEGA.png');"></div>
     </div>
-    <script>
-        document.querySelectorAll('.faq-question').forEach(item => {
-            item.addEventListener('click', () => {
-                const parent = item.parentElement;
-                parent.classList.toggle('active');
-            });
-        });
-    </script>
+
+</body>
+</html>
+
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000; /* Cor de fundo opcional */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    grid-template-rows: repeat(2, auto); /* 2 linhas */
+    gap: 10px; /* Espaço entre as imagens */
+    max-width: 400px; /* Largura máxima para manter formato mobile */
+}
+
+.image-box {
+    width: 100%;
+    height: 250px; /* Ajuste a altura conforme necessário */
+    background-color: #1a73e8; /* Cor temporária para visualizar */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+    </style>
+
 </body>
 </html>

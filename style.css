@@ -10,7 +10,7 @@ body {
   font-family: 'Merriweather', serif; /* Fonte elegante */
   background-repeat: no-repeat; /* Impede que a imagem se repita */
   background-color: #070719;
-  background-image: url('');
+  background-image: url('fundodetela.jpg');
   background-size: cover;
   background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
   background-position: center;
@@ -640,22 +640,24 @@ hr {
 
 
 
-/* Estilizando a seção principal sky*/
+/* Estilizando a seção principal sky */
 .skytv .container2 {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px; /* Espaçamento entre imagem e conteúdo */
-  margin: 10px 0;
+  justify-content: center; /* Centraliza o conteúdo dentro do container */
+  gap: 20px; /* Pequeno espaçamento entre a imagem e o conteúdo */
+  margin: 0 auto; /* Garante que o container esteja centralizado na página */
   text-align: center;
-  flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+  max-width: 1200px; /* Limita a largura máxima para manter centralizado */
 }
 
 /* Estilizando a imagem */
 .skytv .sky-img {
-  flex: 0 0 300px;
-  width: 50%;
+  flex: none;
+  display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 .skytv .sky-img img {
@@ -667,10 +669,14 @@ hr {
 
 /* Estilizando o conteúdo ao lado da imagem */
 .skytv .sky-content {
+  flex: none;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   max-width: 500px;
+  margin: 0;
+  padding: 0 20px;
 }
 
 /* Texto acima da lista */
@@ -695,24 +701,26 @@ hr {
 @media (max-width: 768px) {
   .skytv .container2 {
     flex-direction: column;
-    gap: 20px; /* Ajustando o espaçamento */
+    gap: 10px;
+    max-width: 100%; /* Garante que ocupe toda a largura */
   }
 
   .skytv .sky-img {
     width: 100%;
-    display: flex;
     justify-content: center;
-    margin-bottom: 10px; /* Reduzindo a distância entre a imagem e o texto */
+    margin: 0;
   }
 
   .skytv .sky-img img {
-    width: 300px; /* Reduzindo o tamanho da imagem */
-    height: 220px;
+    width: 300px;
+    height: auto;
   }
 
   .skytv .sky-content {
     width: 90%;
     max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
   }
 
   .skytv .sky-description h2 {
@@ -723,6 +731,9 @@ hr {
     font-size: 14px;
   }
 }
+
+
+
 
 
 
@@ -799,39 +810,62 @@ hr {
 
 
 
-/* Container principal faixa de acesso rapido  */
+/* Container principal faixa de acesso rápido */
 .faixa {
   background-color: #0089cb;
   display: flex;
-  flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+  flex-wrap: wrap; /* Permite que as imagens quebrem linha se necessário */
   justify-content: center;
+  align-items: center; /* Centraliza os itens horizontalmente */
   gap: 5px;
-  padding: 0px;
-  background-size: cover;  /* A imagem cobre toda a área */
-  background-position: center;  /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Impede repetição da imagem */
+  padding-top: 20px;
+  padding-bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
 }
 
-/* Cada item dentro da faixa */
+/* Estilo do título */
+.faixa h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  width: 100%; /* Garante que o título ocupe toda a largura */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 10px; /* Espaço entre o título e as imagens */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Contêiner para alinhar as imagens em linha */
+.item-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que as imagens quebrem linha em telas menores */
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Cada item */
 .item {
   text-align: center;
-  flex: 1 1 250px; /* Ajusta a largura de forma responsiva */
-  max-width: 300px; /* Define um limite para o tamanho do item */
+  max-width: 300px;
   padding: 20px;
 }
 
-/* Estilo para as imagens clicáveis */
+/* Estilo para as imagens */
 .item img {
-  width: 250px; /* Ajuste conforme necessário */
+  width: 250px;
   height: auto;
-  cursor: pointer; /* Torna a imagem clicável */
+  cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
 /* Efeito ao passar o mouse */
 .item img:hover {
-  transform: scale(1.1); /* Efeito de leve zoom */
+  transform: scale(1.1);
 }
+
+
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -847,7 +881,7 @@ hr {
 
   /* Ajusta o tamanho das imagens para telas menores */
   .item img {
-    width: 250px; /* Aumenta a largura da imagem no mobile */
+    width: 220px; /* Aumenta a largura da imagem no mobile */
   }
 }
 
@@ -1121,8 +1155,13 @@ button:hover {
 }
 
 /* Ajustando os títulos para ficarem laranja */
+.container7 p {
+  color: #fff;
+}
+
 .container7 h2 {
   color: #e36f09;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .platforms {
