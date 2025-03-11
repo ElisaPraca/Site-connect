@@ -150,3 +150,14 @@ cloneImages();
         arrow.innerHTML = '&#x25BC;';
     }
 }
+
+
+
+
+
+
+
+
+
+
+

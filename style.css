@@ -687,14 +687,21 @@ hr {
 
 .skytv .sky-description h2 {
   font-size: 24px;
-  font-weight: bold;
   color: #e36f09;
   margin-bottom: 5px;
+  font-family: 'Raleway', sans-serif;
 }
 
 .skytv .sky-description p {
   font-size: 16px;
   color: #cfb698;
+}
+
+.skytv .sky-content p{
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+
 }
 
 /* Responsividade para telas menores */
@@ -875,7 +882,7 @@ hr {
 
   /* Garante que os itens ocupem toda a largura em telas pequenas */
   .item {
-    flex: 1 1 100%; /* Itens ocupam 100% da largura */
+    flex: 1 1 80%; /* Itens ocupam 100% da largura */
     max-width: none; /* Remove o limite de largura */
   }
 
@@ -883,7 +890,18 @@ hr {
   .item img {
     width: 220px; /* Aumenta a largura da imagem no mobile */
   }
+
+  /* Ajuste para quebrar "Acesso Rápido" apenas no mobile */
+  .mobile-break {
+    display: block; /* Faz "Acesso" ir para cima e "Rápido" para baixo */
+    text-align: center;
+  }
+
+  .display-4 {
+    text-align: center; /* Centraliza o texto */
+  }
 }
+
 
 
 
@@ -1303,6 +1321,10 @@ button:hover {
     font-size: 12px;
   }
 }
+
+
+
+
 
 
 

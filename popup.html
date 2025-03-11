@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escolher Plano</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background: #f4f4f4; }
+        .container12 { margin: 50px auto; padding: 20px; background: white; border-radius: 20px; width: 90%; max-width: 600px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); }
+        .title { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+        .logo-container { display: flex; justify-content: center; gap: 20px; margin: 10px 0; }
+        .logo7 { width: 80px; height: 80px; }
+        .subtitle { font-size: 18px; margin: 5px 0 20px 0; }
+        .plan { display: flex; justify-content: center; margin: 20px 0; gap: 40px; }
+        .option { padding: 15px; border-radius: 15px; background: #ffe4c4; width: 45%; text-align: center; cursor: pointer; }
+        .option img { width: 50px; height: 50px; margin: 5px; cursor: pointer; }
+        .selected { border: 3px solid green; border-radius: 10px; }
+        .btn-contratar { margin-top: 20px; padding: 15px 30px; background: #ffd700; color: black; border: none; border-radius: 30px; font-size: 18px; cursor: pointer; }
+        .btn-contratar:hover { background: #ffbf00; }
+    </style>
+</head>
+<body>
+    <div class="container12">
+        <div class="title">Plano 700MEGA</div>
+        <div class="logo-container">
+            <img src="sky.png" alt="SKY" class="logo7">
+            <img src="globo.png" alt="GLOBO" class="logo7">
+        </div>
+        <div class="subtitle">ESCOLHA SEUS BÔNUS</div>
+        <div class="plan">
+            <div class="option">
+                <h3>STANDARD</h3>
+                <img src="image.png" alt="NBA" onclick="selecionarImagem(this, 'NBA', 'STANDARD')">
+                <img src="image.png" alt="HBO Max" onclick="selecionarImagem(this, 'HBO Max', 'STANDARD')">
+                <img src="image.png" alt="Disney+" onclick="selecionarImagem(this, 'Disney+', 'STANDARD')">
+                <img src="image.png" alt="Fire TV" onclick="selecionarImagem(this, 'Fire TV', 'STANDARD')">
+                <img src="image.png" alt="Fitness" onclick="selecionarImagem(this, 'Fitness', 'STANDARD')">
+            </div>
+            <div class="option">
+                <h3>PREMIUM</h3>
+                <img src="image.png" alt="NBA" onclick="selecionarImagem(this, 'NBA', 'PREMIUM')">
+                <img src="image.png" alt="HBO Max" onclick="selecionarImagem(this, 'HBO Max', 'PREMIUM')">
+                <img src="image.png" alt="Disney+" onclick="selecionarImagem(this, 'Disney+', 'PREMIUM')">
+                <img src="image.png" alt="Fire TV" onclick="selecionarImagem(this, 'Fire TV', 'PREMIUM')">
+                <img src="image.png" alt="Fitness" onclick="selecionarImagem(this, 'Fitness', 'PREMIUM')">
+            </div>
+        </div>
+        <button class="btn-contratar" onclick="contratarPlano()">CONTRATAR</button>
+    </div>
+
+    <script>
+        let selecionados = { STANDARD: '', PREMIUM: '' };
+
+        function selecionarImagem(element, nome, plano) {
+            const container = element.parentNode;
+            const imagens = container.querySelectorAll('img');
+            imagens.forEach(img => img.classList.remove('selected'));
+            selecionados[plano] = nome;
+            element.classList.add('selected');
+        }
+
+        function contratarPlano() {
+            let mensagem = `Olá, gostaria de contratar o Plano 700MEGA + SKY & GLOBO com os seguintes bônus: *STANDARD: ${selecionados.STANDARD || 'Nenhum'}, PREMIUM: ${selecionados.PREMIUM || 'Nenhum'}*`;
+            let url = `https://wa.me/11949251470?text=${encodeURIComponent(mensagem)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+</html>
