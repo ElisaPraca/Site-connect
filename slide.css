@@ -32,7 +32,7 @@ display: flex;
 .nav-manual, .nav-auto {
     position: absolute;
     width: 100%;
-    margin-top: 32%;
+    margin-top: 25%;
     display: flex;
     justify-content: center;
 }

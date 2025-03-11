@@ -884,6 +884,9 @@ hr {
   .item {
     flex: 1 1 80%; /* Itens ocupam 100% da largura */
     max-width: none; /* Remove o limite de largura */
+    gap: 5px;
+    padding: 0%;
+    margin: 0%;
   }
 
   /* Ajusta o tamanho das imagens para telas menores */
