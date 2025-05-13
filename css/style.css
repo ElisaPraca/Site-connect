@@ -9,7 +9,7 @@
 body {
   font-family: 'Merriweather', serif; /* Fonte elegante */
   background-repeat: no-repeat; /* Impede que a imagem se repita */
-  background-color: #ffffff;
+  background-color: #f5f5f5;
   background-image: url('../Imagens/fundo.png');
   background-size: cover;
   background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
@@ -17,6 +17,13 @@ body {
   overflow-x: hidden; /* Impede a rolagem lateral */
 
 }
+
+@media (max-width: 768px) {
+  body {
+    background-image: none;
+  }
+}
+
 
 /* Cabeçalho */
 /* Remover a lista de estilo */
