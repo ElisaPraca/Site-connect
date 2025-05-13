@@ -1,0 +1,1402 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+body {
+  font-family: 'Merriweather', serif; /* Fonte elegante */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  background-color: #ffffff;
+  background-image: url('../Imagens/fundo.png');
+  background-size: cover;
+  background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
+  background-position: center;
+  overflow-x: hidden; /* Impede a rolagem lateral */
+
+}
+
+/* Cabeçalho */
+/* Remover a lista de estilo */
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none; /* Garantir que não haja sublinhado nos links */
+  color: #fff;
+  font-size: 1rem;
+}
+
+a:hover {
+  color: #ed8223;
+  text-decoration: none; /* Remover sublinhado também no hover */
+}
+
+/* Cabeçalho */
+header {
+  width: 100%;
+  padding: 20px 4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: linear-gradient(to right, #0089cb, #0089cb); /* Cor de fundo para o cabeçalho fixo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para destacar o cabeçalho */
+}
+
+/* Cabeçalho com a rolagem */
+header.rolagem {
+  background: linear-gradient(to right, #0089cb, #0089cb);
+  padding: 20px 4%;
+}
+
+header.rolagem a, header.rolagem i {
+  color: #fff;
+}
+
+.navbar {
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-img-logo {
+  width: 150px; /* Ajuste o tamanho conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.navbar .links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar .toggle_btn {
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: #ed8223;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: scale 0.2s ease;
+}
+
+.action_btn:hover {
+  scale: 1.05;
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+/* Menu Dropdown */
+.dropdown_menu {
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 60px;
+  height: 0;
+  width: 300px;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+  height: 240px;
+}
+
+.dropdown_menu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown_menu .action_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+  .navbar .links,
+  .navbar .action_btn {
+    display: none;
+  }
+
+  .navbar .toggle_btn {
+    display: block;
+  }
+
+  .dropdown_menu {
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .dropdown_menu {
+    left: 2rem;
+    width: unset;
+  }
+}
+
+/* Espaço para o cabeçalho fixo (garantindo que o conteúdo não sobreponha o cabeçalho) */
+body {
+  margin-top: 100px; /* Ajuste o valor com base na altura do seu cabeçalho */
+  padding-top: 0;
+}
+
+/* Adicionando espaço ao conteúdo para não ser coberto pelo cabeçalho */
+.content {
+  margin-top: 60px; /* Esse valor deve ser igual à altura do cabeçalho */
+}
+
+/* Ajustes de layout para o conteúdo */
+.main-content {
+  padding: 20px;
+}
+
+
+
+main.cards {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  
+  padding: 5px;
+  height: 150px; /* Ocupa toda a altura da tela */
+  width: 100%; /* Ocupa toda a largura da tela */
+
+  position: relative; /* Necessário para usar o 'top' */
+  top: -50px; /* Ajuste o valor para mover os cards para cima */
+}
+
+main.cards section.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 9px;
+  max-height: 120px;
+  margin-left: 5px;
+}
+
+main.cards section.card:first-child {
+  margin-left: 0;
+}
+
+/* Estilo do ícone, imagem e título */
+main.cards section.card .icon {
+  width: 30px;
+  height: 30px;
+}
+
+main.cards section.card img {
+  width: 100%;
+}
+
+main.cards section.card h3 {
+  font-size: 100%;
+  margin: 5px 0;
+  color: #000000;
+}
+
+main.cards section.card span {
+  font-weight: 300;
+  max-width: 240px;
+  font-size: 68%;
+  margin-bottom: 16px;
+}
+
+main.cards section.card.contact {
+  box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+main.cards section.card.shop {
+  box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+main.cards section.card.about {
+  box-shadow: 20px 20px 50px -30px #AFD6FF;
+}
+
+/* Ajuste para telas médias */
+@media screen and (max-width: 720px) {
+  main.cards {
+      flex-wrap: wrap; /* Permite que os cards se ajustem */
+      justify-content: center;
+      gap: 10px; /* Mantém espaço entre os cards */
+  }
+
+  main.cards section.card {
+      width: 45%; /* Reduz o tamanho para caberem lado a lado */
+      margin-left: 0;
+      margin-bottom: 32px;
+  }
+
+  main.cards section.card:last-child {
+      margin-bottom: 0;
+  }
+}
+
+/* Esconder os cards no mobile */
+@media screen and (max-width: 716px) {
+  main.cards {
+    display: none; /* Oculta toda a seção dos cards no mobile */
+  }
+}
+
+/* Estilo para o texto abaixo do slide */
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap');
+
+
+
+.conteudo {
+  text-align: center; /* Centraliza o texto horizontalmente */
+  max-width: 800px; /* Define largura máxima */
+  margin: 10px auto 0; /* Centraliza na horizontal */
+  padding: 20px;
+  color: #000000;
+}
+
+/* Estilização do título */
+.titulo {
+  font-size: 7.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Texto com espaçamento ideal */
+.descricao {
+  font-size: 1.2em;
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 5rem; /* Reduz o tamanho da fonte do título em tablets */
+  }
+
+  .descricao {
+    font-size: 0.8em; /* Ajusta o tamanho do texto */
+    line-height: 1.5; /* Ajusta o espaçamento entre as linhas */
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 3.5rem; /* Reduz ainda mais o tamanho do título para smartphones */
+  }
+
+  .descricao {
+    font-size: 0.7em; /* Ajusta o tamanho do texto */
+    line-height: 1.4; /* Ajusta o espaçamento entre as linhas */
+  }
+
+  .conteudo {
+    padding: 15px; /* Reduz o padding em telas menores */
+  }
+}
+
+/*planos*/
+
+.planos {
+  margin-top: 80px; /* Ajuste esse valor conforme o tamanho do cabeçalho */
+}
+
+.wrapper{
+  width: 300px;
+  max-width: 300px; /* Limita o tamanho máximo de cada carrossel */
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 10px 10px 15px rgba(0,0,0,0.05);
+}
+.wrapper .header1{
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  position: relative;
+  z-index: 5;
+}
+.header1 label{
+  height: 100%;
+  z-index: 2;
+  width: 30%;
+  display: flex;
+  cursor: pointer;
+  font-size: 15px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+.wrapper input[type="radio"] {
+  display: none;
+}
+
+/* Movimenta os slides apenas dentro do carrossel correspondente */
+[id^="tab-1"]:checked ~ .card-area .cards .row-1 {
+  margin-left: 0%;
+}
+
+[id^="tab-2"]:checked ~ .card-area .cards .row-1 {
+  margin-left: -33.4%;
+}
+
+[id^="tab-3"]:checked ~ .card-area .cards .row-1 {
+  margin-left: -66.8%;
+}
+
+/* Faz a animação da aba ativa corretamente */
+[id^="tab-1"]:checked ~ .header1 .slider2 {
+  left: 0%;
+  width: 90px;
+  transform: translateX(5%);
+}
+
+[id^="tab-2"]:checked ~ .header1 .slider2 {
+  left: 50%;
+  width: 120px;
+  transform: translateX(-50%);
+}
+
+[id^="tab-3"]:checked ~ .header1 .slider2 {
+  left: 100%;
+  width: 95px;
+  transform: translateX(-105%);
+}
+
+.header1 label:nth-child(2){
+  width: 40%;
+}
+.header1 .slider2{
+  position: absolute;
+  height: 50%;
+  border-radius: inherit;
+  background: linear-gradient(145deg, #6495ED 0%, #BBDEFF 100%);
+  transition: all 0.3s ease;
+}
+#tab-1:checked ~ .header1 .slider2{
+  left: 0%;
+  width: 90px;
+  transform: translateX(5%);
+}
+#tab-2:checked ~ .header1 .slider2{
+  left: 50%;
+  width: 120px;
+  transform: translateX(-50%);
+}
+#tab-3:checked ~ .header1 .slider2{
+  left: 100%;
+  width: 95px;
+  transform: translateX(-105%);
+}
+.wrapper input[type="radio"]{
+  display: none;
+}
+.card-area{
+  overflow: hidden;
+}
+.card-area .cards{
+  display: flex;
+  width: 300%;
+}
+.cards .row{
+  width: 33.4%;
+}
+.cards .row-1{
+  transition: all 0.3s ease;
+}
+#tab-1:checked ~ .card-area .cards .row-1{
+  margin-left: 0%;
+}
+#tab-2:checked ~ .card-area .cards .row-1{
+  margin-left: -33.4%;
+}
+#tab-3:checked ~ .card-area .cards .row-1{
+  margin-left: -66.8%;
+}
+.row .price-details{
+  margin: 20px 0;
+  text-align: center;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.price-details .price{
+  font-size: 65px;
+  font-weight: 600;
+  position: relative;
+  font-family: 'Noto Sans', sans-serif;
+}
+.price-details .price::before,
+.price-details .price::after{
+  position: absolute;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+}
+.price-details .price::before{
+  content: "R$";
+  left: -18px;
+  top: 17px;
+  font-size: 18px;
+}
+.price-details .price::after{
+  content: "/mês";
+  right: -33px;
+  bottom: 17px;
+  font-size: 13px;
+}
+.price-details p{
+  font-size: 30px;
+  margin-top: 5px;
+
+}
+.row .features li{
+  display: flex;
+  font-size: 15px;
+  list-style: none;
+  margin-bottom: 10px;
+  align-items: center;
+}
+.features li i{
+  background: linear-gradient(#fff 0%, #fff 100%);
+  background-clip: text;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+.features li span{
+  margin-left: 5px;
+  color: #fff;
+  
+}
+.wrapper button{
+  width: 100%;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  height: 50px;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  background: linear-gradient(145deg, #00008B 0%, #BBDEFF 100%);
+  transition: transform 0.3s ease;
+}
+.wrapper button:hover{
+  transform: scale(0.98);
+}
+
+.carousels-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os carrosséis quebrem linha */
+  justify-content: center; /* Centraliza os carrosséis */
+  gap: 20px; /* Espaçamento entre os carrosséis */
+  padding: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .wrapper {
+    max-width: 350px; /* Reduz o tamanho dos carrosséis em tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .carousels-container {
+    flex-direction: column; /* Empilha os carrosséis em telas menores */
+    align-items: center; /* Centraliza os carrosséis */
+  }
+  
+  .wrapper {
+    max-width: 100%; /* Ocupa a largura total em telas pequenas */
+  }
+}
+
+
+
+/* ============================ */
+/* IMAGENS .apps            */
+/* ============================ */
+.imagens-apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.imagens-apps img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.imagens-apps img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+hr {
+  border: none;
+  height: 0.2px;
+  background-color: #ccc; /* Cor da linha */
+  margin: 20px 0; /* Espaçamento acima e abaixo */
+}
+
+
+
+/* ============================ */
+/* titulo sky          */
+/* ============================ */
+
+/* ----------- ESTILO GERAL ----------- */
+.conteudo1 {
+  text-align: center; /* Centraliza todo o conteúdo */
+  padding: 20px 0; /* Ajusta o espaçamento interno */
+  margin: 5px; /* Remove margens externas */
+}
+
+.conteudo1 h2 {
+  font-size: 2.5em; /* Título grande e chamativo */
+  font-family: 'Poppins', sans-serif; /* Fonte moderna */
+  font-weight: 600; /* Deixa o título mais destacado */
+  color: #000000; 
+  margin-bottom: 10px; /* Pequeno espaço abaixo do título */
+}
+
+.conteudo1 p {
+  font-size: 1.0em; /* Tamanho legível */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100; /* Texto mais fino e elegante */
+  color: #000000; /* Mantém a cor branca */
+  margin: 0; /* Remove margens extras */
+  padding: 0 10px; /* Pequeno padding lateral para melhor leitura */
+  line-height: 1.5; /* Espaçamento adequado entre linhas */
+}
+
+/* ----------- MOBILE RESPONSIVO ----------- */
+@media (max-width: 768px) {
+  .conteudo1 {
+    padding: 10px 0; /* Reduz o espaçamento no mobile */
+  }
+
+  .conteudo1 h2 {
+    font-size: 2em; /* Título um pouco menor para telas pequenas */
+    margin-bottom: 8px;
+  }
+
+  .conteudo1 p {
+    font-size: 1em; /* Ajusta o tamanho do texto */
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+
+  /* Ajustando a seção de baixo para remover espaços extras */
+  .proxima-secao { /* Troque pelo nome da classe da seção seguinte */
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+
+
+
+
+
+/* Estilizando a seção principal sky */
+.skytv .container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o conteúdo dentro do container */
+  gap: 20px; /* Pequeno espaçamento entre a imagem e o conteúdo */
+  margin: 0 auto; /* Garante que o container esteja centralizado na página */
+  text-align: center;
+  max-width: 1200px; /* Limita a largura máxima para manter centralizado */
+}
+
+/* Estilizando a imagem */
+.skytv .sky-img {
+  flex: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.skytv .sky-img img {
+  width: 650px;
+  height: 400px;
+  border-radius: 2%;
+  object-fit: cover;
+}
+
+/* Estilizando o conteúdo ao lado da imagem */
+.skytv .sky-content {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 0;
+  padding: 0 20px;
+}
+
+/* Texto acima da lista */
+.skytv .sky-description {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.skytv .sky-description h2 {
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 5px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.skytv .sky-description p {
+  font-size: 16px;
+  color: #cfb698;
+}
+
+.skytv .sky-content p{
+  font-size: 14px;
+  color: #000000;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .skytv .container2 {
+    flex-direction: column;
+    gap: 10px;
+    max-width: 100%; /* Garante que ocupe toda a largura */
+  }
+
+  .skytv .sky-img {
+    width: 100%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .skytv .sky-img img {
+    width: 300px;
+    height: auto;
+  }
+
+  .skytv .sky-content {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .skytv .sky-description h2 {
+    font-size: 20px;
+  }
+
+  .skytv .sky-description p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+
+/* Carrossel */
+.carousel1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  overflow: hidden;
+  padding: 15px 0;
+  margin-bottom: 50px;
+}
+
+.carousel-container1 {
+  width: 100%; /* Responsivo: o carrossel ocupa toda a largura disponível */
+  max-width: 1200px; /* Limita a largura para telas maiores */
+  overflow: hidden;
+}
+
+.carousel-track1 {
+  display: flex;
+  gap: 10px; /* Espaço menor entre as imagens */
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track1 img {
+  width: 50px; /* Reduz o tamanho das imagens */
+  height: 50px; 
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Botões do carrossel */
+.carousel-btn1 {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn1:hover {
+  background-color: rgba(0, 0, 0, 0.5); /* Adiciona um efeito visual ao passar o mouse */
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  .carousel-container1 {
+    width: 100%; /* O carrossel ocupa 100% da largura */
+    max-width: 100%; /* Remove o limite de largura */
+  }
+
+  .carousel-track1 img {
+    width: 40px; /* Ajusta o tamanho das imagens para dispositivos móveis */
+    height: 40px;
+  }
+
+  .carousel-btn1 {
+    font-size: 18px; /* Reduz o tamanho dos botões no mobile */
+  }
+}
+
+  
+
+
+
+
+
+
+
+
+/* Container principal faixa de acesso rápido */
+.faixa {
+  background-color: #0089cb;
+  display: flex;
+  flex-wrap: wrap; /* Permite que as imagens quebrem linha se necessário */
+  justify-content: center;
+  align-items: center; /* Centraliza os itens horizontalmente */
+  gap: 5px;
+  padding-top: 20px;
+  padding-bottom: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  text-align: center;
+}
+
+/* Estilo do título */
+.faixa h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  width: 100%; /* Garante que o título ocupe toda a largura */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 10px; /* Espaço entre o título e as imagens */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Contêiner para alinhar as imagens em linha */
+.item-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que as imagens quebrem linha em telas menores */
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Cada item */
+.item {
+  text-align: center;
+  max-width: 300px;
+  padding: 20px;
+}
+
+/* Estilo para as imagens */
+.item img {
+  width: 250px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+.item img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .faixa {
+    padding: 5px;
+  }
+
+  /* Garante que os itens ocupem toda a largura em telas pequenas */
+  .item {
+    flex: 1 1 80%; /* Itens ocupam 100% da largura */
+    max-width: none; /* Remove o limite de largura */
+    gap: 5px;
+    padding: 0%;
+    margin: 0%;
+  }
+
+  /* Ajusta o tamanho das imagens para telas menores */
+  .item img {
+    width: 220px; /* Aumenta a largura da imagem no mobile */
+  }
+
+  /* Ajuste para quebrar "Acesso Rápido" apenas no mobile */
+  .mobile-break {
+    display: block; /* Faz "Acesso" ir para cima e "Rápido" para baixo */
+    text-align: center;
+  }
+
+  .display-4 {
+    text-align: center; /* Centraliza o texto */
+  }
+}
+
+
+
+
+
+
+
+
+/* --------- App M&S --------- */ 
+.appMes {
+  background-color: black;
+  border-bottom: 1px solid #00008B; /* Borda azul escura */
+  padding: 0px 0px; /* Adiciona um espaçamento interno */
+}
+
+.appMes .container {
+  display: flex;
+  flex-direction: column; /* Empilha os elementos no mobile */
+  align-items: center;
+  text-align: center;
+}
+
+.appMes .row {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os elementos quebrem para novas linhas */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.appMes .col-lg-8 {
+  color: #fff;
+  flex: 1;
+  max-width: 700px; /* Define um limite para o conteúdo */
+}
+
+.appMes .col-lg-8 h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.appMes .col-lg-8 h5 {
+  font-size: 1em;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.appMes .col-lg-8 .btn {
+  font-size: 1em;
+  padding: 10px 30px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid #0044cc;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.appMes .col-lg-8 .btn:hover {
+  background-color: #0033a0;
+  border-color: #0033a0;
+}
+
+/* Ajuste para a imagem */
+.appMes .col-lg-4 {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 350px;
+}
+
+.appMes .col-lg-4 img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .appMes .container {
+    text-align: center;
+  }
+
+  .appMes .row {
+    flex-direction: column; /* Empilha os elementos no mobile */
+    align-items: center;
+    gap: 15px;
+  }
+
+  .appMes .col-lg-8 h2 {
+    font-size: 2em; /* Reduz o tamanho da fonte do título */
+    padding-top: 20px;
+  }
+
+  .appMes .col-lg-8 h5 {
+    font-size: 0.9em; /* Reduz o tamanho do subtítulo */
+  }
+
+  .appMes .col-lg-8 .btn {
+    font-size: 0.9em;
+    padding: 8px 25px;
+  }
+
+  .appMes .col-lg-4 {
+    max-width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: column; /* Garante que as imagens sejam empilhadas */
+    margin-top: auto; /* Faz a última imagem ir para o final */
+  }
+
+  .appMes .col-lg-4 img {
+    max-width: 80%; /* Reduz um pouco a imagem */
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .appMes {
+    padding: 0px 10px; /* Reduz o espaçamento */
+  }
+
+  .appMes .col-lg-8 h2 {
+    font-size: 1.8em;
+  }
+
+  .appMes .col-lg-8 h5 {
+    font-size: 0.8em;
+  }
+
+  .appMes .col-lg-8 .btn {
+    font-size: 0.8em;
+    padding: 7px 20px;
+  }
+
+  .appMes .col-lg-4 img {
+    max-width: 90%; /* Mantém a imagem em um tamanho adequado */
+  }
+}
+
+
+
+
+
+
+.article-card {
+  display: grid;
+  margin: 0 auto; /* Centraliza horizontalmente */
+  grid-template-columns: 285px minmax(300px, 445px);
+  max-width: 1100px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 5px hsla(0, 0%, 0%, 0.02),
+              25px 25px 20px hsla(0, 0%, 0%, 0.03),
+              100px 100px 80px hsla(0, 0%, 0%, 0.05);
+  margin-top: 40px;  /* Aumenta o espaço acima */
+  margin-bottom: 40px; /* Aumenta o espaço abaixo */
+  grid-template-columns: 1fr 1.2fr; 
+  
+}
+
+
+.img-box {
+  border-radius: 5px 5px 5px 5px;
+  overflow: hidden;
+  width: 100%;  /* Garante que ocupe todo o espaço disponível */
+  height: 100%; /* Ajusta proporcionalmente */
+}
+
+.article-banner {
+  width:  100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+  transition: all 0.5s ease;
+}
+
+.article-card:hover .article-banner { transform: scale(1.1); }
+
+.article-content {
+  color: #000000;
+  padding: 32px 40px;
+  border-radius: 0 10px 10px 0;
+  background: #ffffff;  /* Faixa preta no conteúdo */
+}
+
+.article-title {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.article-text {
+  color: #000000;
+  font-size: var(--fs-13);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.acticle-content-footer {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ff6f00; /* Laranja */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65c00; /* Cor mais escura quando o botão for sobrevoado */
+}
+
+/*-----------------------------------*\
+#RESPONSIVE
+\*-----------------------------------*/
+
+@media screen and (max-width: 768px) {
+
+  :root {
+
+
+    --fs-13: 12px;
+
+  }
+
+  .article-card {
+    grid-template-columns: 1fr;
+    max-width: 294px;
+    overflow: hidden;
+  }
+
+  .img-box, .article-content { border-radius: 0; }
+
+  .img-box { height: 260px; }
+
+  .article-content { padding: 30px 28px 20px; }
+
+  .article-title { font-size: 15px; }
+
+  .article-text { margin-bottom: 30px; }
+
+  .skytv .container2{
+    flex-direction: column;
+  }
+}
+
+
+.container7 {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: transparent;
+  color: #e36f09; /* Deixando os textos laranja */
+  font-family: Arial, sans-serif;
+  text-align: center;
+  gap: 20px;
+}
+
+/* Ajustando os títulos para ficarem laranja */
+.container7 p {
+  color: #000000;
+}
+
+.container7 h2 {
+  color: #e36f09;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+.platforms img {
+  width: 150px;
+  height: 80px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+.platforms img:hover {
+  transform: scale(1.1);
+}
+
+/* Espaçamento entre plataformas e botão */
+.cta-button {
+  background-color: #e36f09; /* Mudando o botão para laranja */
+  color: white;
+  font-size: 18px;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 30px; /* Aumentando a separação entre o texto e o botão */
+}
+
+.cta-button:hover {
+  background-color: darkorange; /* Um laranja mais escuro ao passar o mouse */
+}
+
+
+
+
+
+.faq-container {
+  display: flex;
+  flex-direction: row; /* Mantém a disposição em linha no desktop */
+  align-items: flex-start;
+  width: 100%;
+  padding: 10px;
+  background-repeat: no-repeat;
+  background-color: #0089cb;
+}
+
+.faq-image {
+  flex: 1; /* A imagem ocupa metade do espaço disponível */
+  background: url('../Imagens/faq.png') no-repeat center center;
+  background-size: contain;
+  height: 400px;
+  width: 100%;
+  max-width: 100%;
+  margin-right: 20px; /* Espaçamento entre imagem e conteúdo */
+}
+
+.faq-content {
+  flex: 1; /* O conteúdo ocupa a outra metade */
+  padding: 20px;
+  width: 100%;
+  max-width: 100%;
+}
+
+.faq-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.faq-item {
+  margin-top: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.faq-question:hover {
+  color: #ed8223;
+}
+
+.faq-answer {
+  display: none;
+  padding: 8px 10px;
+  font-size: 14px;
+  color: #fff;
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.faq-question span {
+  font-size: 16px;
+  font-weight: 400;
+  transition: transform 0.3s;
+}
+
+.faq-question.active span:last-child {
+  transform: rotate(90deg);
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 768px) {
+  .faq-container {
+    flex-direction: column; /* No mobile, a disposição fica em coluna */
+    padding: 5px;
+  }
+  .faq-image {
+    height: 300px;
+    max-width: 300px;
+    margin-top: 0;
+    margin-bottom: 20px; /* Espaçamento abaixo da imagem */
+  }
+  .faq-content {
+    padding: 15px;
+  }
+  .faq-title {
+    font-size: 24px;
+  }
+  .faq-question {
+    font-size: 14px;
+  }
+  .faq-answer {
+    font-size: 12px;
+  }
+}
+
+
+.bannerfinal {
+  display: block;
+  width: 100%;
+  height: 100%; /* Ajuste a altura conforme necessário */
+  overflow: hidden;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.bannerfinal img {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -15px;
+  object-fit: cover; /* Isso faz a imagem se ajustar sem distorcer */
+}
+
+
+
+.contact {
+  padding: 5rem 15rem;
+  margin-top: 0px;
+  padding-top: 0%;
+}
+
+.contact .heading {
+  text-align: center;
+  font-size: 2rem;
+  color: black; /* Texto preto */
+  margin-bottom: 2rem;
+}
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .row iframe {
+  flex: 1 1 45rem;
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  border: none;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 1rem;
+  color: black;
+}
+.contact-info p {
+  margin: 5px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .contact {
+    padding: 3rem 2rem;
+  }
+
+  .contact .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact .row iframe {
+    width: 100%;
+    height: 300px;
+  }}

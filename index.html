@@ -9,11 +9,13 @@
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
           crossorigin="anonymous"
           referrerpolicy="no-referrer" />
+          <!-- Box-icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link rel="stylesheet" href="sli.css"/>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="slide.css"/>
-    <link rel="stylesheet" href="foot.css"/>
+    <link rel="stylesheet" href="css/sli.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/slide.css"/>
+    <link rel="stylesheet" href="css/foot.css"/>
     <link rel="stylesheet" href="/planoos/styleplano.css"/>
 
     <title>Connect Link - Site</title>
@@ -26,23 +28,23 @@
       <div class="navbar">
         <div class="logo"><a href="index.html"><img src="Img_apps/logo2.png" alt="Logo" class="logo-img-logo"></a></div>
         <ul class="links">
-          <li><a href="Planos">PLANOS</a></li>
-          <li><a href="Sobre">SOBRE</a></li>
-          <li><a href="Serviços">SERVIÇOS</a></li>
-          <li><a href="contato">CONTATOS</a></li>
+          <li><a href="#conteudo">PLANOS</a></li>
+          <li><a href="/sobre/sobre.html">SOBRE</a></li>
+          <li><a href="#news">NOVIDADES</a></li>
+          <li><a href="#contato">CONTATOS</a></li>
         </ul>
-        <a href="#" class="action_btn">AREA DO CLIENTE</a>
+        <a href="https://sp.connectlinksp.com.br/central_assinante_web/login" class="action_btn">AREA DO CLIENTE</a>
         <div class="toggle_btn">
         <i class="fa-solid fa-bars"></i>
       </div>
     </div>
 
     <div class="dropdown_menu">
-          <li><a href="planos">PLANOS</a></li>
-          <li><a href="Sobre">SOBRE</a></li>
-          <li><a href="Serviços">SERVIÇOS</a></li>
-          <li><a href="contato">CONTATOS</a></li>
-      <li><a href="#" class="action_btn">AREA DO CLIENTE</a></li>
+          <li><a href="#conteudo">PLANOS</a></li>
+          <li><a href="/sobre/sobre.html">SOBRE</a></li>
+          <li><a href="#news">NOVIDADES</a></li>
+          <li><a href="#contato">CONTATOS</a></li>
+      <li><a href="https://sp.connectlinksp.com.br/central_assinante_web/login" class="action_btn">AREA DO CLIENTE</a></li>
     </div>
     </header>
 
@@ -54,18 +56,18 @@
       <input type="radio" name="btn-radio" id="radio3">
 
       <div class="slide-box primeiro">
-        <img class="img-desktop" src="4.png" alt="slide 1">
-        <img class="img-mobile" src="1.png" alt="slide 1">
+        <img class="img-desktop" src="Imagens/4.png" alt="slide 1">
+        <img class="img-mobile" src="Imagens/1.png" alt="slide 1">
       </div>
 
       <div class="slide-box">
-        <img class="img-desktop" src="5.png" alt="slide 2">
-        <img class="img-mobile" src="2.png" alt="slide 2">
+        <img class="img-desktop" src="Imagens/5.png" alt="slide 2">
+        <img class="img-mobile" src="Imagens/2.png" alt="slide 2">
       </div>
 
       <div class="slide-box">
-        <img class="img-desktop" src="6.png" alt="slide 3">
-        <img class="img-mobile" src="3.png" alt="slide 3">
+        <img class="img-desktop" src="Imagens/6.png" alt="slide 3">
+        <img class="img-mobile" src="Imagens/3.png" alt="slide 3">
       </div>
 
     <div class="nav-auto">
@@ -110,7 +112,7 @@
       </section>
   </main>
 
-    <section class="conteudo">
+    <section id="conteudo" class="conteudo">
       <h2 class="efeito-texto">ESCOLHA SEU PLANO</h2>
       <p class="efeito-texto">Encontre a melhor opção para suas necessidades e aproveite todos os benefícios.</p>
   </section>
@@ -548,12 +550,15 @@
         <!-- Slide-start -->
         <div class="swiper-slide tranding-slide">
           <div class="tranding-slide-img">
-            <img src="500MEGA.png" alt="Tranding">
+            <img src="planoos/images/500MEGA.png" alt="Tranding">
           </div>
           <div class="tranding-slide-content">
             <div class="tranding-slide-content-bottom1">
             <!-- Imagem clicável que leva para outro link -->
-            <img src="escolherplano.png" alt="Escolher Plano" class="botao-imagem" onclick="abrirModal()">
+            <a href="https://wa.me/5511914833144" target="_blank">
+              <img src="Imagens/escolherplano.png" alt="Escolher Plano" class="botao-imagem">
+            </a>
+            
             
             </div>
           </div>
@@ -563,14 +568,15 @@
         <!-- Slide-start -->
         <div class="swiper-slide tranding-slide">
           <div class="tranding-slide-img">
-            <img src="700MEGA.png" alt="Tranding">
+            <img src="planoos/images/700MEGA.png" alt="Tranding">
           </div>
           <div class="tranding-slide-content">
             <div class="tranding-slide-content-bottom1">
             <!-- Imagem clicável que leva para outro link -->
-      <a href="https://seusite.com/plano100mega" target="_blank">
-        <img src="escolherplano.png" alt="Escolher Plano" class="botao-imagem">
-      </a>
+            <a href="https://wa.me/5511914833144" target="_blank">
+              <img src="Imagens/escolherplano.png" alt="Escolher Plano" class="botao-imagem">
+            </a>
+            
             
             
             </div>
@@ -580,14 +586,15 @@
         <!-- Slide-start -->
         <div class="swiper-slide tranding-slide">
           <div class="tranding-slide-img">
-            <img src="900MEGA.png" alt="Tranding">
+            <img src="planoos/images/900MEGA.png" alt="Tranding">
           </div>
           <div class="tranding-slide-content">
             <div class="tranding-slide-content-bottom1">
                 <!-- Imagem clicável que leva para outro link -->
-      <a href="https://seusite.com/plano100mega" target="_blank">
-        <img src="escolherplano.png" alt="Escolher Plano" class="botao-imagem">
-      </a>
+                <a href="https://wa.me/5511914833144" target="_blank">
+                  <img src="Imagens/escolherplano.png" alt="Escolher Plano" class="botao-imagem">
+                </a>
+                
           
           
             </div>
@@ -597,14 +604,15 @@
         <!-- Slide-start -->
 <div class="swiper-slide tranding-slide">
   <div class="tranding-slide-img">
-    <img src="100MEGA.png" alt="Tranding">
+    <img src="planoos/images/100MEGA.png" alt="Tranding">
   </div>
   <div class="tranding-slide-content">
     <div class="tranding-slide-content-bottom1">
       <!-- Imagem clicável que leva para outro link -->
-      <a href="https://seusite.com/plano100mega" target="_blank">
-        <img src="escolherplano.png" alt="Escolher Plano" class="botao-imagem">
+      <a href="https://wa.me/5511914833144" target="_blank">
+        <img src="Imagens/escolherplano.png" alt="Escolher Plano" class="botao-imagem">
       </a>
+      
     </div>
   </div>
 </div>
@@ -629,27 +637,27 @@
 
 <div class="container10">
   <div class="card10">
-      <img src="100MEGA.png" alt="Plano 100 Mega">
+      <img src="planoos/images/100MEGA.png" alt="Plano 100 Mega">
       <div class="button-container">
-          <a href="#"><img src="escolherplano.png" alt="Botão"></a>
+          <a href="https://wa.me/5511914833144"><img src="Imagens/escolherplano.png" alt="Botão"></a>
       </div>
   </div>
   <div class="card10">
-      <img src="500MEGA.png" alt="Plano 100 Mega">
+      <img src="planoos/images/500MEGA.png" alt="Plano 100 Mega">
       <div class="button-container">
-          <a href="#"><img src="escolherplano.png" alt="Botão"></a>
+          <a href="https://wa.me/5511914833144"><img src="Imagens/escolherplano.png" alt="Botão"></a>
       </div>
   </div>
   <div class="card10">
-      <img src="700MEGA.png" alt="Plano 100 Mega">
+      <img src="planoos/images/700MEGA.png" alt="Plano 100 Mega">
       <div class="button-container">
-          <a href="#"><img src="escolherplano.png" alt="Botão"></a>
+          <a href="https://wa.me/5511914833144"><img src="Imagens/escolherplano.png" alt="Botão"></a>
       </div>
   </div>
   <div class="card10">
-      <img src="900MEGA.png" alt="Plano 100 Mega">
+      <img src="planoos/images/900MEGA.png" alt="Plano 100 Mega">
       <div class="button-container">
-          <a href="#"><img src="escolherplano.png" alt="Botão"></a>
+          <a href="https://wa.me/5511914833144"><img src="Imagens/escolherplano.png" alt="Botão"></a>
       </div>
   </div>
 </div>
@@ -673,11 +681,12 @@
   <section class="skytv">
     <div class="container2">
       <div class="sky-img">
-        <img src="Imgsky.png" alt="Skyplanostv">
+        <img src="Imagens/Imgsky.png" alt="Skyplanostv">
       </div>
 
       <div class="sky-content"> 
         <!-- Texto acima da lista -->
+  
         <div class="sky-description">
           <h2>ASSISTA AO MELHOR CONTEUDO COM SKY + GLOBO</h2>
           <p>Oferecemos a mais alta tecnologia para que você e sua família aproveitem o melhor.
@@ -687,7 +696,7 @@
         <p>
           TV e Streaming juntos, Canais de esportes, Mais de 70 canais, Milhares de Filmes e Séries, Acessos Simultâneos, 100% Online, Imagens em HD e 4K, Serviço estável e confiável,Funcionalidades interativas e muito mais
         </p>
-  
+      
       </div>
     </div>
   </section>
@@ -780,30 +789,36 @@
 
 
   <div class="container7">
-    <h2>O MELHOR DO CINEMA NA <strong style="color: #fff;">CONNECT LINK,</strong> CONFIRA!</h2>
+    <h2>O MELHOR DO CINEMA NA <strong style="color: #0089cb;">CONNECT LINK,</strong> CONFIRA!</h2>
     <div class="platforms">
-        <img src="netflix.png" alt="Netflix">
-        <img src="max.png" alt="Max">
-        <img src="prime.png" alt="Prime Video">
-        <img src="globoplay.png" alt="Globoplay">
-        <img src="disney.png" alt="Disney+">
-        <img src="appletv.png" alt="Apple TV+">
-        <img src="espn.png" alt="ESPN">
-        <img src="combate.png" alt="Combate">
-        <img src="sportv.png" alt="Sportv">
-        <img src="premiere.png" alt="Premiere">
-        <img src="telecine.png" alt="Telecine">
-        <img src="foxsports.png" alt="Fox Sports">
+        <img src="Imagens/netflix.png" alt="Netflix">
+        <img src="Imagens/max.png" alt="Max">
+        <img src="Imagens/prime.png" alt="Prime Video">
+        <img src="Imagens/globoplay.png" alt="Globoplay">
+        <img src="Imagens/disney.png" alt="Disney+">
+        <img src="Imagens/appletv.png" alt="Apple TV+">
+        <img src="Imagens/espn.png" alt="ESPN">
+        <img src="Imagens/combate.png" alt="Combate">
+        <img src="Imagens/sportv.png" alt="Sportv">
+        <img src="Imagens/premiere.png" alt="Premiere">
+        <img src="Imagens/telecine.png" alt="Telecine">
+        <img src="Imagens/foxsports.png" alt="Fox Sports">
     </div>
     <p>Com a nossa plataforma você pagará apenas o plano e leva esse BONUS!!</p>
     <button class="cta-button" onclick="acessarPlataforma()">Escolher um Plano!</button>
+
+<script>
+  function acessarPlataforma() {
+    window.location.href = "https://wa.me/5511914833144";
+  }
+</script>
 </div>
 
 
 
 
 <div class="bannerfinal">
-  <img src="bannerfinal.png" alt="Banner do site">
+  <img src="Imagens/bannerfinal.png" alt="Banner do site">
   </div>
   
   
@@ -814,18 +829,18 @@
   </h2>
   
   <div class="item">
-      <a href="https://seulink.com/2via" target="_blank">
-          <img src="segundavia.png" alt="2ª Via da Fatura">
+      <a href="https://sp.connectlinksp.com.br/central_assinante_web/login" target="_blank">
+          <img src="Imagens/segundavia.png" alt="2ª Via da Fatura">
       </a>
   </div>
   <div class="item">
-      <a href="https://seulink.com/testevelocidade" target="_blank">
-          <img src="VELOCIDADE1.png" alt="Teste de Velocidade">
+      <a href="https://www.speedtest.net/pt" target="_blank">
+          <img src="Imagens/VELOCIDADE1.png" alt="Teste de Velocidade">
       </a>
   </div>
   <div class="item">
-      <a href="https://seulink.com/cliente" target="_blank">
-          <img src="CLIENTEAREA.png" alt="Área do Cliente">
+      <a href="https://sp.connectlinksp.com.br/central_assinante_web/login" target="_blank">
+          <img src="Imagens/CLIENTEAREA.png" alt="Área do Cliente">
       </a>
   </div>
 </div>
@@ -844,17 +859,17 @@
           <!-- Imagens pequenas dentro da mesma div do texto -->
           <div class="app-buttons">
             <a href="https://play.google.com/store/apps/details?id=br.com.connectlinksp.appclientes" target="_blank">
-              <img src="googleplay.png" alt="Google Play" class="img-fluid app-icon">
+              <img src="Imagens/googleplay.png" alt="Google Play" class="img-fluid app-icon">
             </a>
             <a href="https://apps.apple.com/us/app/connect-link/idxxxxx" target="_blank">
-              <img src="applestore.png" alt="Apple Store" class="img-fluid app-icon">
+              <img src="Imagens/applestore.png" alt="Apple Store" class="img-fluid app-icon">
             </a>
           </div>
         </div>
   
         <div class="col-lg-4">
           <a href="https://play.google.com/store/apps/details?id=br.com.connectlinksp.appclientes" alt="App connect Link">
-            <img alt="APP connect LinkÁrea do cliente Android" src="appbaixe.png" class="img-fluid">
+            <img alt="APP connect LinkÁrea do cliente Android" src="Imagens/appbaixe.png" class="img-fluid">
           </a>
         </div>
       </div>
@@ -876,7 +891,11 @@
                 <span>Minha internet caiu? O que devo fazer?</span>
                 <span>&#x25B6;</span>
             </div>
-            <div class="faq-answer">Verifique seu roteador e entre em contato com o suporte.</div>
+            <div class="faq-answer">Primeiramente, recomendamos que desligue seu modem ou roteador, aguarde cerca de 30 segundos e ligue novamente.
+              Caso o serviço não retorne após esse procedimento, entre em contato com nosso suporte técnico.
+              Estamos à disposição para ajudar e garantir que sua conexão volte o mais rápido possível.
+              
+              </div>
         </div>
         
         <div class="faq-item">
@@ -884,7 +903,7 @@
                 <span>O que é Fibra Óptica?</span>
                 <span>&#x25B6;</span>
             </div>
-            <div class="faq-answer">Fibra óptica é uma tecnologia de transmissão de dados através de fios de vidro ou plástico.</div>
+            <div class="faq-answer">Fibra óptica é uma tecnologia de transmissão de dados que utiliza fios extremamente finos de vidro ou plástico para transportar sinais de luz. Essa luz carrega informações em altíssima velocidade, permitindo conexões de internet muito mais rápidas, estáveis e com maior capacidade de transmissão do que os cabos tradicionais de cobre.</div>
         </div>
         
         <div class="faq-item">
@@ -892,7 +911,11 @@
                 <span>Posso pegar meu boleto pelo site?</span>
                 <span>&#x25B6;</span>
             </div>
-            <div class="faq-answer">Sim, acesse sua conta no site e vá para a seção de boletos.</div>
+            <div class="faq-answer">Atualmente, o boleto está disponível apenas pelo aplicativo oficial da Connect Link ou mediante solicitação na nossa central de atendimento via WhatsApp.
+
+              Aplicativo: Basta acessar o app, ir até a área de “Boletos” e selecionar o mês desejado.
+              
+              WhatsApp: Se preferir, entre em contato com nossa equipe pelo WhatsApp e solicite o envio do seu boleto.</div>
         </div>
         
         <div class="faq-item">
@@ -900,7 +923,9 @@
                 <span>Quando chove, minha conexão vai cair?</span>
                 <span>&#x25B6;</span>
             </div>
-            <div class="faq-answer">A conexão de fibra óptica não é afetada pela chuva, diferente das conexões via rádio.</div>
+            <div class="faq-answer">A tecnologia de fibra óptica, utilizada pela Connect Link, é muito resistente a interferências climáticas, como chuva, vento ou trovoadas. Isso significa que, em condições normais, sua conexão não deve cair por causa da chuva.
+
+              No entanto, em casos de chuvas muito intensas, raios ou danos físicos na rede externa, como rompimento de cabos, pode haver instabilidade ou interrupção temporária — mas nossa equipe técnica atua rapidamente para resolver qualquer eventualidade.</div>
         </div>
         
         <div class="faq-item">
@@ -908,9 +933,10 @@
                 <span>Minha internet é garantida?</span>
                 <span>&#x25B6;</span>
             </div>
-            <div class="faq-answer">A qualidade da conexão depende de diversos fatores, mas a fibra óptica oferece maior estabilidade.</div>
+            <div class="faq-answer">A Connect Link trabalha com tecnologia de fibra óptica, oferecendo uma conexão de alta velocidade, estável e confiável. Nosso compromisso é entregar o melhor serviço possível, com monitoramento contínuo da rede e suporte técnico especializado seguindo as normal da Anatel. </div>
         </div>
     </div>
+
 </div>
 
 
@@ -920,28 +946,61 @@
 
 
 
-
+<section id="Sobrelink"></section>
   <article class="article-card">
 
+
     <div class="img-box">
-      <img src="descontos.png" alt="" class="article-banner">
+      <img src="Imagens/descontos.png" alt="" class="article-banner">
     </div>
 
 
     <div class="article-content">
 
       <a href="">
-        <h3 class="article-title">SOBRE NÓS.</h3>
+        <h3 class="article-title"><strong>Novidade na área! A Connect Link agora também é sinônimo de segurança!</strong></h3>
       </a>
 
-      <p class="article-text">A Connect link surgiu através da necessidade da implantação de um serviço de internet para regiões até então, não eram atendidas por nenhuma operadora grande. Nesse momento, enxergamos a carência da região, e logo iniciamos as instalações para suprir a necessidade da região.
+      <p class="article-text">Isso mesmo! Além de entregar <strong>internet de qualidade</strong>, agora a <strong>Connect Link</strong> também te conecta com a segurança do futuro:
+        estamos oferecendo serviços completos de <strong>CÂMERAS DE MONITORAMENTO</strong> para sua casa, empresa ou sítio.
+      </p>
+      <ul  >
+        <li>- Quer ver tudo pelo celular, de onde estiver</li>
+        <li>- Gravações na nuvem e acesso 24h</li>
+        <li>- Instalação rápida e suporte de verdade</li>
+      </ul>
+    </p>
+    <button class="cta-button" onclick="acessarPlataforma()">Saber Mais</button>
 
-        Somos profissionais de confiança e com ótima experiência. Ouvimos os nossos clientes e trabalhamos com eles para suprir as suas necessidades através de soluções inovadoras e tecnológicas. Cuidamos dos nossos clientes de forma personalizada, com toda seriedade e comprometimento.</p>
-        <button>Saiba Mais</button>
     </div>
 
+    <section id="news"></section>
   </article>
 
+
+  <iframe src="html/news.html" width="100%" height="600px" style="border:none;"></iframe>
+
+
+  <section id="contato"></section>
+  <!-- contact section starts  -->
+
+  <section class="contact" id="contact">
+    <h1 class="heading"> <span>Localização e</span> Contatos </h1>
+  
+    <div class="row">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3654.8593805639325!2d-46.782213625017995!3d-23.645206464677173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5384dbef3e85%3A0x2dad24b52619a35f!2sAv.%20Carlos%20Lacerda%2C%201560%20-%20Jardim%20Rosana%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005789-001!5e0!3m2!1spt-PT!2sbr!4v1742302791730!5m2!1spt-PT!2sbr"  
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  
+    <div class="contact-info">
+      <p><strong> Endereço:</strong> Av. Carlos Lacerda, 1560 - Jardim Rosana, São Paulo - SP, 05789-001</p>
+      <p><strong> Telefone:</strong> (11) 3042-1387  <strong> whatsapp: </strong> (11) 91483-3144 </p>
+      <p><strong> E-mail:</strong> sac@connectlinksp.com.br</p>
+    </div>
+  </section>
+
+<!-- contact section ends -->
 
   <footer>
     <div id="footer_content">
@@ -950,7 +1009,7 @@
             <p>Conectando Vidas.</p>
 
             <div id="footer_social_media">
-                <a href="#" class="footer-link" id="instagram">
+                <a href="https://www.instagram.com/connectlinktechsp/#" class="footer-link" id="instagram">
                     <i class="fa-brands fa-instagram"></i>
                 </a>
 
@@ -958,7 +1017,7 @@
                     <i class="fa-brands fa-facebook-f"></i>
                 </a>
 
-                <a href="#" class="footer-link" id="whatsapp">
+                <a href="https://api.whatsapp.com/send/?phone=5511914833144&text=Como+posso+ajudar%3F&type=phone_number&app_absent=0" class="footer-link" id="whatsapp">
                     <i class="fa-brands fa-whatsapp"></i>
                 </a>
             </div>
@@ -969,7 +1028,7 @@
                 <h3>Midia</h3>
             </li>
             <li>
-                <a href="#" class="footer-link">Instagram</a>
+                <a href="https://www.instagram.com/connectlinktechsp/#" class="footer-link">Instagram</a>
             </li>
             <li>
                 <a href="#" class="footer-link">E-mail</a>
@@ -984,13 +1043,13 @@
                 <h3>Produtos</h3>
             </li>
             <li>
-                <a href="#" class="footer-link">Planos</a>
+                <a href="#conteudo" class="footer-link">Planos</a>
             </li>
             <li>
-                <a href="#" class="footer-link">Serviços</a>
+                <a href="#news" class="footer-link">Novidades</a>
             </li>
             <li>
-                <a href="#" class="footer-link">Contatos</a>
+                <a href="#contato" class="footer-link">Contatos</a>
             </li>
         </ul>
 
@@ -998,7 +1057,7 @@
             <h3>Politica de privacidade</h3>
 
             <p>
-              <div class="logo"><a href="#"><img src="Img_apps/anatel.png" alt="Logo" class="logo-img-logo"></a></div>
+              <div class="logo"><a href=""><img src="Img_apps/anatel.png" alt="Logo" class="logo-img-logo"></a></div>
             </p>
 
             
@@ -1022,13 +1081,16 @@
     });
 </script>
 
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
     <script src="/planoos/scriptplano.js"></script>
+    
     
 
   </body>

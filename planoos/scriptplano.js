@@ -3,26 +3,38 @@ function isMobile() {
   return /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 }
 
-var TrandingSlider = new Swiper('.tranding-slider', {
+var trandingSlider = new Swiper('.tranding-slider', {
   effect: 'coverflow',
-  grabCursor: true,  // Permite o cursor no desktop
+  grabCursor: true,
   centeredSlides: true,
-  loop: true,
-  slidesPerView: 'auto',
+  //loop: true, // 🔁 Ativado
+  initialSlide: 1,
+  spaceBetween: 30,
   coverflowEffect: {
     rotate: 0,
     stretch: 0,
-    depth: 100,
-    modifier: 2.5,
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
+    depth: 300,
+    modifier: 1.5,
+    slideShadows: false
   },
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  touchStartPreventDefault: true,
-  touchMoveStopPropagation: true
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    }
+  }
 });
+
