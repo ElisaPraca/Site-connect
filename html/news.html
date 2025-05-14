@@ -300,6 +300,53 @@ img{
     }
 }
 
+@media (max-width: 768px) {
+    .post {
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        gap: 1rem;
+        padding: 1rem 0;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .post-box {
+        flex: 0 0 calc(100% / 1.5); /* Exibe ~2 cards por vez, desliza suave */
+        scroll-snap-align: start;
+        min-width: 220px;
+        max-width: 260px;
+    }
+
+   
+}
+
+@media (max-width: 768px) {
+    .scroll-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 1rem 0;
+    }
+
+    .post {
+        display: flex;
+        width: max-content;
+        gap: 1rem;
+    }
+
+    .post-box {
+        flex: 0 0 260px;
+        scroll-snap-align: start;
+    }
+
+    .scroll-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+
+
+
+
 /* NOVO: Esconde parte da descrição por padrão */
 .post-description {
     font-size: 0.9rem;
@@ -339,7 +386,13 @@ img{
 
     </div>
     
+
+    
+    <div class="post-scroll-wrapper">
+        <div class="post">
     <div class="post container22">
+
+        
         <!-- Post 1 -->
         <div class="post-box tech">
             <img src="../Imagens_news/chip.png" alt="" class="post-img">
@@ -415,7 +468,8 @@ img{
                 <span class="profile-name">Av. Carlos Lacerda, 1554</span>
             </div>
         </div>
-
+    </div>
+</div>
 
 
     
