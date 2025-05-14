@@ -39,6 +39,28 @@ document.querySelectorAll(".read-more").forEach(button => {
 });
 
 
+// Centraliza o card do meio no mobile ao carregar a página
+window.addEventListener("load", function () {
+    if (window.innerWidth <= 768) {
+        const postContainer = document.querySelector(".post");
+        const posts = postContainer.querySelectorAll(".post-box");
+
+        if (posts.length > 0) {
+            const middleIndex = Math.floor(posts.length / 2);
+            const middlePost = posts[middleIndex];
+
+            const offsetLeft = middlePost.offsetLeft - (postContainer.offsetWidth / 2) + (middlePost.offsetWidth / 2);
+
+            postContainer.scrollTo({
+                left: offsetLeft,
+                behavior: "smooth"
+            });
+        }
+    }
+});
+
+
+
 
 // Desabilitar o clique direito
 document.addEventListener("contextmenu", function(event) {

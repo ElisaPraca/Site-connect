@@ -328,15 +328,18 @@ img{
     }
 
     .post {
-        display: flex;
-        width: max-content;
-        gap: 1rem;
-    }
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding: 1rem 0;
+    -webkit-overflow-scrolling: touch;
+}
 
-    .post-box {
-        flex: 0 0 260px;
-        scroll-snap-align: start;
-    }
+.post-box {
+    flex: 0 0 260px;
+    scroll-snap-align: center; /* Isso ajuda a manter o snap central */
+}
 
     .scroll-wrapper::-webkit-scrollbar {
         display: none;
