@@ -9,8 +9,8 @@
 body {
   font-family: 'Merriweather', serif; /* Fonte elegante */
   background-repeat: no-repeat; /* Impede que a imagem se repita */
-  background-color: #f5f5f5;
-  background-image: url('../Imagens/fundo.png');
+  background-color: #f1f1f1;
+ 
   background-size: cover;
   background-attachment: fixed; /* Mantém a imagem fixa ao rolar a página */
   background-position: center;
