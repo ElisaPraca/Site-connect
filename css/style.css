@@ -1256,7 +1256,7 @@ button:hover {
 
 .faq-image {
   flex: 1; /* A imagem ocupa metade do espaço disponível */
-  background: url('../Imagens/faq.png') no-repeat center center;
+  background: url('../Imagens/faq2.png') no-repeat center center;
   background-size: contain;
   height: 400px;
   width: 100%;
