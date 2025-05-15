@@ -649,6 +649,18 @@ hr {
 
 
 /* Estilizando a seção principal sky */
+
+
+
+.img-promo-sky, .img-conteudo-sky {
+  width: 100%;
+  max-width: 600px; /* Ajuste como quiser */
+  display: block;
+  margin: 0 auto;
+}
+
+
+
 .skytv .container2 {
   display: flex;
   align-items: center;
