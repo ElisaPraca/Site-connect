@@ -1259,9 +1259,9 @@ button:hover {
   background: url('../Imagens/faq2.png') no-repeat center center;
   background-size: contain;
   height: 400px;
-  width: 100%;
+  width: 90%;
   max-width: 100%;
-  margin-right: 20px; /* Espaçamento entre imagem e conteúdo */
+  margin-right: -90px; /* Espaçamento entre imagem e conteúdo */
 }
 
 .faq-content {
