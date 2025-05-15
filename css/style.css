@@ -273,7 +273,7 @@ main.cards section.card.about {
 }
 
 /* Esconder os cards no mobile */
-@media screen and (max-width: 716px) {
+@media screen and (max-width: 836px) {
   main.cards {
     display: none; /* Oculta toda a seção dos cards no mobile */
   }
@@ -620,7 +620,7 @@ hr {
 }
 
 /* ----------- MOBILE RESPONSIVO ----------- */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .conteudo1 {
     padding: 10px 0; /* Reduz o espaçamento no mobile */
   }
@@ -714,7 +714,7 @@ hr {
 
 
 /* Responsividade para telas menores */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .skytv .container2 {
     flex-direction: column;
     gap: 10px;
