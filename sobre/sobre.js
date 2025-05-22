@@ -8,14 +8,13 @@ setInterval(() => {
 
 
 
-    // Desabilitar o clique direito
+// Desabilitar o clique direito
 document.addEventListener("contextmenu", function(event) {
     event.preventDefault();
 });
 
-
 document.addEventListener("keydown", function(event) {
-    if ((event.key === "F12") || (event.ctrlKey && event.shiftKey && event.key === "I")) {
-        event.preventDefault();
-    }
-  });
+if ((event.key === "F12") || (event.ctrlKey && event.shiftKey && event.key === "I")) {
+    event.preventDefault();
+}
+});
