@@ -1229,7 +1229,7 @@ button:hover {
 
 /* Espaçamento entre plataformas e botão */
 .cta-button {
-  background-color: #e36f09; /* Mudando o botão para laranja */
+  background-color: #e36f09; 
   color: white;
   font-size: 18px;
   padding: 15px 25px;

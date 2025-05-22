@@ -32,7 +32,7 @@ display: flex;
 .nav-manual, .nav-auto {
     position: absolute;
     width: 100%;
-    margin-top: 25%;
+    margin-top: 30%;
     display: flex;
     justify-content: center;
 }
@@ -87,6 +87,6 @@ display: flex;
     }
     
     .nav-auto, .nav-manual{
-        margin-top: 65%;
+        margin-top: 54%;
     }
 }
