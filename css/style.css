@@ -601,6 +601,35 @@ hr {
   margin: 5px; /* Remove margens externas */
 }
 
+.conteudomovel {
+  text-align: center; /* Centraliza todo o conteúdo */
+  padding: 20px 0; /* Ajusta o espaçamento interno */
+  margin: 5px; /* Remove margens externas */
+  position: relative;
+  top: -160px; /* Move para cima */
+  margin-bottom: -160px;
+}
+
+.conteudomovel h2 {
+  font-size: 2.5em; /* Título grande e chamativo */
+  font-family: 'Poppins', sans-serif; /* Fonte moderna */
+  font-weight: 600; /* Deixa o título mais destacado */
+  color: #000000; 
+  margin-bottom: 10px; /* Pequeno espaço abaixo do título */
+}
+
+.conteudomovel p {
+  font-size: 1.0em; /* Tamanho legível */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 100; /* Texto mais fino e elegante */
+  color: #000000; /* Mantém a cor branca */
+  margin: 0; /* Remove margens extras */
+  padding: 0 10px; /* Pequeno padding lateral para melhor leitura */
+  line-height: 1.5; /* Espaçamento adequado entre linhas */
+}
+
+
+
 .conteudo1 h2 {
   font-size: 2.5em; /* Título grande e chamativo */
   font-family: 'Poppins', sans-serif; /* Fonte moderna */
@@ -1188,6 +1217,28 @@ button:hover {
   }
 }
 
+.conteudo777 {
+  background-image: url('../assets2/img/apps_background2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.conteudo777::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.8); /* Aqui ajusta a visibilidade. 0.5 = 50% escuro */
+  z-index: 1;
+}
+
+.conteudo777 > * {
+  position: relative;
+  z-index: 2;
+}
+
+
 
 .container7 {
   max-width: 800px;
@@ -1423,3 +1474,141 @@ button:hover {
     width: 100%;
     height: 300px;
   }}
+
+
+
+
+
+  /* do wave 
+
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0px;
+  margin-top: -50px;
+  z-index: -2;
+} 
+*/
+
+.divisor-zigzag {
+  height: 20px;
+  margin-top: -5px;
+  background: repeating-linear-gradient(
+    45deg,
+    #0089cb,
+    #0089cb 10px,
+    #fff 10px,
+    #fff 20px
+  );
+}
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,300,500);
+
+section.card111 {
+  background: #000046;
+  background: -webkit-linear-gradient(to right, #1CB5E0, #000046); 
+  background: linear-gradient(to right, #1CB5E0, #000046);
+  border-radius: 24px 24px 24px 48px;
+  padding: 48px 48px 48px 308px;
+  margin: 84px 0;
+  min-width: 640px;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  position: relative;
+  box-shadow: 5px 0 0 0 rgba(204,204,204,0.3), -5px 0 0 0 rgba(204,204,204,0.3), 0 5px 0 0 rgba(204,204,204,0.3);
+}
+section.card111 .text-content {
+  display: flex;
+  flex-direction: column;
+  width:calc(60vw - 192px);
+}
+section.card111 .text-content h3 {
+  margin: 0;
+  font-size: 1.5em;
+  max-width: 20ch;
+  color: #fff;
+}
+section.card111 .text-content p {
+  margin: 25px 0 24px;
+  color: #fff;
+}
+section.card111 .text-content a {
+  border: 3px solid #f2f2f2;
+  color: #ffffff;
+  align-self: flex-start;
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 12px;
+  transition: 400ms all;
+}
+section.card111 .text-content a:hover {
+  background: #051c5e;
+  color: white;
+}
+section.card111 .visual {
+  width: 240px;
+  height: 100%;
+  position: absolute;
+  top: -24px;
+  left: 24px;
+  overflow: hidden;
+  border-radius: 24px;
+}
+section.card111 .visual img {
+  height: 110%;
+}
+article {
+  margin: auto;
+  display: block;
+  width:calc(60vw + 248px);
+  max-width:calc(920px + 248px);
+  min-width:calc(640px + 248px); 
+}
+@media all and (max-width: 1100px) {
+  article {
+    width: 100%;
+    min-width: 100%;
+  }
+  section.card111 {
+    min-width: 100%;
+  }
+  section.card111 .text-content {
+    width: 100%;
+  }
+}
+@media all and (max-width: 720px) {
+  article {
+    padding: 5px 20px 0;
+  }
+  section.card111 {
+    margin: 64px 0;
+    padding: 88px 36px 36px;
+    flex-direction: column;
+    border-radius: 24px;
+  }
+  section.card111 .text-content h3 {
+    max-width:calc(100% - 150px);
+    font-size: 1em;
+  }
+  section.card111 .text-content p,
+  section.card111 .text-content a {
+    font-size: 0.8em;
+  }
+  section.card111 .visual {
+    width: 150px;
+    height: 150px;
+    right: 16px;
+    left: auto;
+    border-radius: 50%;
+  }
+  section.card111 .visual img{
+    width: 100%;
+    height: auto;
+    }
+}
+

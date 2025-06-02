@@ -153,7 +153,6 @@ cloneImages();
 
 
 
-
 // Desabilitar o clique direito
 document.addEventListener("contextmenu", function(event) {
     event.preventDefault();

@@ -663,11 +663,7 @@
 </div>
 
 
-
-
-
-
-
+ 
 
 
   <section class="conteudo1">
@@ -776,9 +772,10 @@
 
 
 
+ <div class="divisor-zigzag"></div>
 
 
-
+ <section class="conteudo777" >
   <div class="container7">
     <h2>O MELHOR DO CINEMA NA <strong style="color: #0089cb;">CONNECT LINK,</strong> CONFIRA!</h2>
     <div class="platforms">
@@ -797,6 +794,7 @@
     </div>
     <p>Com a nossa plataforma você pagará apenas o plano e leva esse BONUS!!</p>
     <button class="cta-button" onclick="acessarPlataforma()">Escolher um Plano!</button>
+    </section>
 
 <script>
   function acessarPlataforma() {
@@ -805,6 +803,240 @@
 </script>
 </div>
 
+
+
+ <div class="divisor-zigzag"></div>
+
+
+
+  <section class="conteudo1" >
+    <h2 class="efeito-texto1">PLANOS CONNECT MOVEL</h2>
+    <p>Connect Móvel é a liberdade que te conecta onde você estiver porque limite é coisa do passado!</p>
+</section>
+
+
+
+<iframe src="movel.html" width="100%" height="600px" style="border:none;"></iframe>
+
+<!-- O divisor SVG 
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 320">
+    <path fill="#0089CB" fill-opacity="1"
+      d="M0,256L80,229.3C160,203,320,149,480,149.3C640,149,800,203,960,202.7C1120,203,1280,149,1360,122.7L1440,96L1440,0L0,0Z">
+    </path>
+  </svg>
+</div>
+ -->
+
+
+
+
+
+
+  <section class="conteudomovel">
+    <h2 class="efeito-texto1">PLANOS SEGURANÇA RESIDENCIAL</h2>
+    <p>Segurança Residencial Connect: seu lar blindado, sua paz de espírito ligada no automático!</p>
+</section>
+
+
+
+
+
+
+
+<style>
+  .card-container7777 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 90px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .card-container7777::-webkit-scrollbar {
+    display: none; /* Esconde a barra de rolagem no mobile */
+  }
+
+  .card1212 {
+    flex: 0 0 calc(25% - 10px); /* 4 por linha no desktop */
+    aspect-ratio: 2/3;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: transparent;
+    scroll-snap-align: start;
+  }
+
+  .card1212 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .card1212:hover img {
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 768px) {
+    .card-container7777 {
+      padding: 20px;
+      gap: 16px;
+    }
+
+    .card1212 {
+      flex: 0 0 100%; /* Mostra um por vez no mobile */
+    }
+  }
+</style>
+
+<div class="card-container7777">
+  <a href="https://example.com/1" class="card1212" target="_blank">
+    <img src="img/CameraSegurança/2.png" alt="Imagem 1">
+  </a>
+  <a href="https://example.com/2" class="card1212" target="_blank">
+    <img src="img/CameraSegurança/1.png" alt="Imagem 2">
+  </a>
+  <a href="https://example.com/3" class="card1212" target="_blank">
+    <img src="img/CameraSegurança/3.png" alt="Imagem 3">
+  </a>
+  <a href="https://example.com/4" class="card1212" target="_blank">
+    <img src="img/CameraSegurança/4.png" alt="Imagem 4">
+  </a>
+</div>
+
+
+<!--
+
+<section style="width: 100%; padding: 80px 20px; background-color: #0000;">
+  <div style="
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: -70px;
+    padding: 0;
+
+  ">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     
+    <!-- Botões dos planos -->
+    <!-- <div class="planos" style="flex: 1 1 300px; display: flex; flex-direction: column; gap: 20px;">
+      <button onclick="mostrarImagem('a')"> <i class="fas fa-video"></i> Combo 10 Câmeras de Segurança</button>
+      <button onclick="mostrarImagem('b')"><i class="fas fa-video"></i> Combo 16 Câmeras + Gravador</button>
+      <button onclick="mostrarImagem('c')"><i class="fas fa-video"></i> Monitoramento + Acesso Remoto</button>
+      <button onclick="mostrarImagem('d')"><i class="fas fa-video"></i> Plano Profissional com Alarme</button>
+    </div>
+
+    <!-- Imagem dinâmica -->
+     <!--<div style="flex: 2 1 600px;">
+      <img id="imgPlano" src="Imagens/Banner Segurança - Mobile.jpg" alt="Imagem do plano" style="
+        width: 100%;
+        border-radius: 20px;
+        object-fit: cover;
+        box-shadow: 0 10px 25px rgba(251, 251, 251, 0.1);
+      ">
+    </div>
+
+  </div>
+</section>
+
+<style>
+
+.planos {
+  margin-bottom: 60px;
+  padding-top: -90px;
+}
+
+.planos button {
+  background: #0000;
+  color: #000000;
+  font-weight: 600;
+  padding: 16px 28px;
+  border: 2px solid #0089cb;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1rem;
+  transform-style: preserve-3d;
+  margin-bottom: 10px;
+}
+
+.planos button:hover {
+  background: linear-gradient(145deg, #e2e7e9, #6ccbe5);
+  box-shadow: 
+    2px 2px 5px #f2f3f4,
+    -2px -2px 5px #0077b6;
+  transform: translateZ(10px) scale(1.05);
+}
+
+
+
+  @media (max-width: 768px) {
+    .planos {
+      width: 100%;
+      align-items: center;
+    }
+
+    .planos button {
+      width: 100%;
+    }
+
+    #imgPlano {
+      margin-top: 20px;
+    }
+  }
+</style>
+
+<script>
+  function mostrarImagem(plano) {
+    const imagens = {
+      a: "Imagens/10cameraspng.png",
+      b: "Imagens/skymais.png",
+      c: "Imagens/netflix.png",
+      d: "Imagens/sportv.png"
+    };
+
+    document.getElementById("imgPlano").src = imagens[plano];
+  }
+</script>-->
+
+ <!--
+<article>
+    <section class="card111">
+      <div class="text-content">
+        <h3> 📦 Cloud Rápido – 3 Dias </h3>
+        <p>Ideal para quem precisa de armazenamento rápido e eficiente por pouco tempo. É perfeito para emergências, testes ou viagens curtas.
+Valor normal: R$ 39,00 – Com desconto: R$ 29,90</p>  
+        <a href="https://www.web-leb.com/code">Saiba Mais</a>
+      </div>
+      <div class="visual">
+        <img src="img/1.png" alt="" />
+      </div>
+    </section>
+  </article>
+
+  <article>
+    <section class="card111">
+      <div class="text-content">
+        <h3>Combo Cameras 20</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+           Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>  
+        <a href="https://www.web-leb.com/code">Saiba Mais</a>
+      </div>
+      <div class="visual">
+        <img src="img/1.png" alt="" />
+      </div>
+    </section> 
+  </article> -->
 
 
 

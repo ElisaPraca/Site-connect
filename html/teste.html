@@ -1,190 +1,161 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planos</title>
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #121212;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-        .carousel-container {
-            position: relative;
-            width: 320px;
-            overflow: hidden;
-        }
-        .carousel {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .card {
-            background: linear-gradient(135deg, #e60000, #ff3d00);
-            color: white;
-            width: 300px;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            position: relative;
-            flex-shrink: 0;
-            margin-right: 10px;
-        }
-        .badge {
-            background-color: gold;
-            color: #121212;
-            font-weight: bold;
-            padding: 8px 12px;
-            border-radius: 20px;
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-        }
-        .title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        .subtitle {
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
-        .divider {
-            width: 100%;
-            height: 2px;
-            background-color: white;
-            opacity: 0.5;
-            margin: 12px 0;
-        }
-        .benefits {
-            text-align: left;
-            font-size: 13px;
-            margin: 12px 0;
-            line-height: 1.5;
-        }
-        .benefits ul {
-            padding: 0;
-            list-style-type: none;
-        }
-        .benefits li::before {
-            content: "\2713";
-            color: gold;
-            margin-right: 6px;
-            font-weight: bold;
-        }
-        .price {
-            font-size: 20px;
-            font-weight: bold;
-            margin: 12px 0;
-        }
-        .button {
-            background-color: gold;
-            color: #121212;
-            font-weight: bold;
-            border: none;
-            padding: 10px;
-            border-radius: 20px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 14px;
-            transition: 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        .button:hover {
-            background-color: #ffd700;
-        }
-        .nav-buttons {
-            display: flex;
-            justify-content: center;
-            margin-top: 15px;
-        }
-        .nav-button {
-            background-color: gold;
-            border: none;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 50%;
-            cursor: pointer;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Planos</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      gap: 40px;
+      background-color: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .planos {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .planos button {
+      background-color: teal;
+      color: white;
+      font-weight: bold;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .planos button:hover {
+      background-color: #006666;
+    }
+
+    .explicacao {
+      background-color: teal;
+      color: white;
+      padding: 30px;
+      width: 350px;
+      height: 200px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <div class="carousel-container">
-        <div class="carousel" id="carousel">
-            <script>
-                for (let i = 0; i < 6; i++) {
-                    document.write(`
-                        <div class="card"> 
-                            <div class="badge">MAIS VENDIDO</div> 
-                            <div class="title">PLANO 3 ANOS</div> 
-                            <div class="subtitle">Pague 2 Anos e Leve 3 (Ganhe Mais 1 Ano de Acesso Grátis)</div> 
-                            <div class="divider"></div> 
-                            <p>O MAIS VENDIDO! Se você gosta de vantagens e benefícios, o plano Anual é para você!</p> 
-                            <div class="divider"></div> 
-                            <div class="benefits">
-                                <ul>
-                                    <li>Use 3 telas simultaneamente</li>
-                                    <li>Mais de 60.000 conteúdos</li>
-                                    <li>Qualidade SD/HD/FHD/4K</li>
-                                    <li>Guia de Programação [EPG]</li>
-                                    <li>Assista no Smartphone/Tablet</li>
-                                    <li>Assista no TV Box/Chromecast</li>
-                                    <li>Assista na Smart TV</li>
-                                    <li>Assista no Computador</li>
-                                    <li>Programação Adultos [Opcional]</li>
-                                    <li>Pacote Filmes e Série</li>
-                                </ul>
-                            </div> 
-                            <div class="divider"></div> 
-                            <div class="price">12x R$ 29,70</div> 
-                            <button class="button">QUERO ESSE!</button> 
-                            <div class="price">Ou R$ 297,00</div> 
-                        </div>
-                    `);
-                }
-            </script>
-        </div>
+
+  <div class="container">
+    <div class="planos">
+      <button onclick="mostrarExplicacao('a')">Plano A</button>
+      <button onclick="mostrarExplicacao('b')">Plano B</button>
+      <button onclick="mostrarExplicacao('c')">Plano C</button>
+      <button onclick="mostrarExplicacao('d')">Plano D</button>
     </div>
-    <div class="nav-buttons">
-        <button class="nav-button" onclick="prevSlide()">&#10094;</button>
-        <button class="nav-button" onclick="nextSlide()">&#10095;</button>
+
+    <div class="explicacao" id="infoPlano">
+      Clique em um plano para ver a explicação.
     </div>
-    <script>
-        let index = 0;
-        const totalCards = 6;
-        const carousel = document.getElementById('carousel');
+  </div>
 
-        function updateCarousel() {
-            carousel.style.transform = `translateX(-${index * 310}px)`;
-        }
+  <script>
+    function mostrarExplicacao(plano) {
+      const info = {
+        a: "Plano A: Ideal para iniciantes. 100MB + suporte básico.",
+        b: "Plano B: Mais performance. 300MB + suporte VIP.",
+        c: "Plano C: Alta velocidade. 500MB + IP fixo incluso.",
+        d: "Plano D: Profissional. 1GB + assistência técnica 24h."
+      };
 
-        function nextSlide() {
-            if (index < totalCards - 1) {
-                index++;
-            } else {
-                index = 0;
-            }
-            updateCarousel();
-        }
+      document.getElementById("infoPlano").textContent = info[plano];
+    }
+  </script>
 
-        function prevSlide() {
-            if (index > 0) {
-                index--;
-            } else {
-                index = totalCards - 1;
-            }
-            updateCarousel();
-        }
-    </script>
+
+
+<section style="width: 100%; padding: 60px 0; background-color: #f0f0f0;">
+  <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 60px; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    
+    <div class="planos" style="display: flex; flex-direction: column; gap: 20px;">
+      <button onclick="mostrarExplicacao('a')">Plano A</button>
+      <button onclick="mostrarExplicacao('b')">Plano B</button>
+      <button onclick="mostrarExplicacao('c')">Plano C</button>
+      <button onclick="mostrarExplicacao('d')">Plano D</button>
+    </div>
+
+    <div id="infoPlano" style="
+      background-color: teal;
+      color: white;
+      padding: 30px;
+      width: 400px;
+      height: 220px;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
+    ">
+      Clique em um plano para ver a explicação.
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .planos button {
+    background-color: teal;
+    color: white;
+    font-weight: bold;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1rem;
+  }
+
+  .planos button:hover {
+    background-color: #006666;
+  }
+</style>
+
+<script>
+  function mostrarExplicacao(plano) {
+    const info = {
+      a: "Plano A: Ideal para iniciantes. 100MB + suporte básico.",
+      b: "Plano B: Mais performance. 300MB + suporte VIP.",
+      c: "Plano C: Alta velocidade. 500MB + IP fixo incluso.",
+      d: "Plano D: Profissional. 1GB + assistência técnica 24h."
+    };
+
+    document.getElementById("infoPlano").textContent = info[plano];
+  }
+</script>
+
+
 </body>
 </html>
