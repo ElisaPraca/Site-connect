@@ -1218,7 +1218,7 @@ button:hover {
 }
 
 .conteudo777 {
-  background-image: url('../assets2/img/apps_background2.png');
+  background-color: #0089cb;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1229,7 +1229,7 @@ button:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Aqui ajusta a visibilidade. 0.5 = 50% escuro */
+  background-color: rgba(0, 0, 0, 0.7); /* Aqui ajusta a visibilidade. 0.5 = 50% escuro */
   z-index: 1;
 }
 
@@ -1253,7 +1253,7 @@ button:hover {
 
 /* Ajustando os títulos para ficarem laranja */
 .container7 p {
-  color: #000000;
+  color: #ffffff;
 }
 
 .container7 h2 {
@@ -1498,8 +1498,8 @@ button:hover {
     45deg,
     #0089cb,
     #0089cb 10px,
-    #fff 10px,
-    #fff 20px
+    #ffffff 10px,
+    #ffffff 20px
   );
 }
 
