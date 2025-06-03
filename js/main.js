@@ -1,5 +1,5 @@
 // Quando a página carregar, mostrar apenas os posts da categoria "tech"
-const defaultFilter = "tech";
+const defaultFilter = "news";
 $(".post-box").hide(); // Esconde tudo primeiro
 $(".post-box." + defaultFilter).fadeIn(500); // Aparece suavemente
 

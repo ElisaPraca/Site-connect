@@ -38,6 +38,8 @@
   padding: 2rem 0;
 }
 
+
+
 #tranding {
   padding: 4rem 0;
 }
@@ -83,9 +85,9 @@
 }
 
 .tranding-slide .tranding-slide-img img {
-  width: 27rem;
-  height: 32rem;
-  border-radius: 2rem;
+  width: 400PX;
+  height: 400PX;
+  border-radius: 50px !important;
   object-fit: contain;
 }
 
@@ -304,7 +306,7 @@
   position: absolute;
   justify-content: center;
   align-items: flex-end;
-  top: 90%;
+  top: 95%;
   left: 50%; /* Centraliza horizontalmente */
   transform: translate(-50%, -50%); /* Garante que a centralização aconteça de forma precisa */
   z-index: 7; /* Garante que o botão fique sobre a imagem */
@@ -312,7 +314,7 @@
 
 /* Botão retangular */
 .button-container a img {
-  width: 200px;  /* Largura do botão retangular */
+  width: 300px;  /* Largura do botão retangular */
   height: 100px;  /* Altura do botão retangular */
   cursor: pointer; /* Indica que é clicável */
 }

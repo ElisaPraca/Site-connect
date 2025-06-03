@@ -838,7 +838,7 @@ hr {
 }
 
 .carousel-btn1:hover {
-  background-color: rgba(0, 0, 0, 0.5); /* Adiciona um efeito visual ao passar o mouse */
+  background-color: rgba(0, 0, 0, 0); /* Adiciona um efeito visual ao passar o mouse */
 }
 
 /* Responsividade para dispositivos móveis */
@@ -1218,7 +1218,7 @@ button:hover {
 }
 
 .conteudo777 {
-  background-color: #0089cb;
+  background-color: #0000;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1229,7 +1229,7 @@ button:hover {
   content: '';
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.7); /* Aqui ajusta a visibilidade. 0.5 = 50% escuro */
+ /* background-color: rgba(0, 0, 0, 0.7); /* Aqui ajusta a visibilidade. 0.5 = 50% escuro */
   z-index: 1;
 }
 
@@ -1253,7 +1253,7 @@ button:hover {
 
 /* Ajustando os títulos para ficarem laranja */
 .container7 p {
-  color: #ffffff;
+  color: #000000;
 }
 
 .container7 h2 {
