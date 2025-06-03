@@ -210,7 +210,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// efeito para contato 
+// efeito para apps
+
+
+
+
+
+
+
 
 
 

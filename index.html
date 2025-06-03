@@ -759,6 +759,27 @@
   }
 }
 
+/* Por padrão no mobile — sem animação */
+.card-animado {
+  opacity: 1;
+  transform: translateX(0);
+  transition: none;
+}
+
+/* Ativa animação só em telas maiores */
+@media (min-width: 769px) {
+  .card-animado {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  .card-animado.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
   @media (min-width: 769px) {
     .card-container7777 {
       flex-wrap: wrap;
