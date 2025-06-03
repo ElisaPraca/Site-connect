@@ -1671,5 +1671,12 @@ article {
   }
 }
 
-/* Classe base para as imagens animadas  apps*/
 
+
+#contato {
+  scroll-margin-top: 100px; /* ajuste conforme a altura do seu cabeçalho */
+}
+
+#news {
+  scroll-margin-top: 100px; /* ajuste conforme a altura do seu cabeçalho */
+}
