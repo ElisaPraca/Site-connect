@@ -56,7 +56,7 @@ header {
 
 /* Cabeçalho com a rolagem */
 header.rolagem {
-  background: linear-gradient(to right, #0089cb, #0089cb);
+  background: linear-gradient(to right, #ED8223, #ED8223);
   padding: 20px 4%;
 }
 
@@ -975,8 +975,8 @@ hr {
 
 /* --------- App M&S --------- */ 
 .appMes {
-  background-color: black;
-  border-bottom: 1px solid #00008B; /* Borda azul escura */
+  background-color: #ED8223;
+  border-bottom: 1px solid #ED8223; /* Borda azul escura */
   padding: 0px 0px; /* Adiciona um espaçamento interno */
 }
 
