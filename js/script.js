@@ -168,6 +168,58 @@ document.addEventListener("keydown", function(event) {
 
 
 
+// efeito sessao cameras
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.card-animado');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        // Se quiser animar só uma vez e parar de observar, descomente:
+        // observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove('show'); // remove a animação ao sair da tela, opcional
+      }
+    });
+  }, { threshold: 0.1 });
+
+  cards.forEach(card => observer.observe(card));
+});
+
+
+// efeito sky
+
+document.addEventListener('DOMContentLoaded', () => {
+  const skytvSection = document.querySelector('.skytv');
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        // Se quiser só uma vez, pode parar de observar
+        // observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove('show'); // opcional, para esconder se sair da tela
+      }
+    });
+  }, { threshold: 0.1 });
+
+  if (skytvSection) observer.observe(skytvSection);
+});
+
+
+// efeito para contato 
+
+
+
+
+
+
+
+
+
 
 
 

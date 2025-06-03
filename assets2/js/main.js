@@ -24,3 +24,23 @@ let swiperCards = new Swiper(".card__content", {
     },
   },
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.querySelector('.container');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        container.classList.add('show');
+        // Se quiser que só aconteça 1x, descomente a linha abaixo
+        // observer.unobserve(container);
+      } else {
+        container.classList.remove('show');
+      }
+    });
+  }, { threshold: 0.1 }); // dispara quando 10% da seção está visível
+
+  observer.observe(container);
+});
+

@@ -253,6 +253,7 @@ main.cards section.card.about {
   box-shadow: 20px 20px 50px -30px #AFD6FF;
 }
 
+
 /* Ajuste para telas médias */
 @media screen and (max-width: 720px) {
   main.cards {
@@ -679,6 +680,16 @@ hr {
 
 /* Estilizando a seção principal sky */
 
+.skytv {
+  opacity: 0;
+  transform: translateY(50px); /* começa um pouco para baixo */
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.skytv.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 
 
 .img-promo-sky, .img-conteudo-sky {

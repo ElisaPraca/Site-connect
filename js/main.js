@@ -73,3 +73,28 @@ document.addEventListener("keydown", function(event) {
         event.preventDefault();
     }
   });
+
+
+  //efeito de entrada 
+  
+  document.addEventListener('DOMContentLoaded', () => {
+  const postContainer = document.querySelector('.post.container22');
+
+  if (!postContainer) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        // Se quiser só uma vez, pode descomentar a linha abaixo:
+        // observer.unobserve(entry.target);
+      } else {
+        entry.target.classList.remove('show'); // opcional, para remover efeito se sair da tela
+      }
+    });
+  }, {
+    threshold: 0.1 // 10% visível para ativar
+  });
+
+  observer.observe(postContainer);
+});

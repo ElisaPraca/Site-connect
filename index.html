@@ -739,6 +739,17 @@
   filter: brightness(0.9); /* escurece levemente */
 }
 
+.card-animado {
+  opacity: 0;
+  transform: translateX(100px); /* começa deslocado pra direita */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.card-animado.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 
   @media (min-width: 769px) {
     .card-container7777 {
@@ -758,19 +769,21 @@
 </style>
 
 <div class="card-container7777">
-  <a href="https://example.com/1" class="card1212" target="_blank">
+  <a href="https://example.com/1" class="card1212 card-animado" target="_blank">
     <img src="img/CameraSegurança2/2.png" alt="Imagem 1">
   </a>
-  <a href="https://example.com/2" class="card1212" target="_blank">
+  <a href="https://example.com/2" class="card1212 card-animado" target="_blank">
     <img src="img/CameraSegurança2/1.png" alt="Imagem 2">
   </a>
-  <a href="https://example.com/3" class="card1212" target="_blank">
+  <a href="https://example.com/3" class="card1212 card-animado" target="_blank">
     <img src="img/CameraSegurança2/3.png" alt="Imagem 3">
   </a>
-  <a href="https://example.com/4" class="card1212" target="_blank">
+  <a href="https://example.com/4" class="card1212 card-animado" target="_blank">
     <img src="img/CameraSegurança2/4.png" alt="Imagem 4">
   </a>
 </div>
+
+
 
   <!-- <div class="divisor-zigzag"></div>-->
 

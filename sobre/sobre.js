@@ -18,3 +18,12 @@ if ((event.key === "F12") || (event.ctrlKey && event.shiftKey && event.key === "
     event.preventDefault();
 }
 });
+
+
+  window.addEventListener('load', function() {
+    setTimeout(() => {
+      const section = document.getElementById('nossa-historia');
+      section.scrollIntoView({ behavior: 'smooth' });
+    }, 1200); // Espera 1.2 segundos antes de descer
+  });
+

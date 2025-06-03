@@ -192,6 +192,18 @@ img {
   background-color: var(--second-color);
 }
 
+.container {
+  opacity: 0;
+  transform: translateX(-100px); /* começa deslocada para a esquerda */
+  transition: all 0.7s ease-out;
+}
+
+.container.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 @media screen and (max-width: 320px) {
