@@ -750,6 +750,14 @@
   transform: translateX(0);
 }
 
+/* Remove a animação no mobile */
+@media (max-width: 768px) {
+  .card-animado {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+    transition: none !important;
+  }
+}
 
   @media (min-width: 769px) {
     .card-container7777 {
